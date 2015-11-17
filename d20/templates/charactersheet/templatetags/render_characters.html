@@ -1,0 +1,7 @@
+<ul class="list-group">
+    {% for object in objects %}
+    <li class="list-group-item"><a href="{% url 'Charactersheet:Charactersheet-Detail' object.slug %}">{{ object.name }}</a></li>
+    {% empty %}
+    <li class="list-group-item">Nothing to display.</li>
+    {% endfor %}
+</ul>

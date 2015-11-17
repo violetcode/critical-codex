@@ -1,0 +1,86 @@
+{% extends 'core/upgrade.html' %}{% load zebra_tags %}
+
+{% block title %}Upgrade | {% endblock %}
+{% block page %}default-page stripe-form{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
+{% zebra_head_and_stripe_key %}
+{% endblock %}
+
+{% block content-heading %}
+<h2>Upgrade</h2>
+{% endblock %}
+
+{% block content-inner %}
+<strong>{% if user.is_premium %}Premium{% else %}Free{% endif %} member</strong> <br />
+<span class="pull-right">Not you? <a href="{% url 'Core:logout' %}">Logout</a></span>
+{{ user.username }} - {{ user.email }}
+<hr />
+
+<div class="alert alert-info">
+All memberships are automatically renewed until canceled. You can cancel at anytime by clicking here. Membership fees are non-refundable. Full terms <a href="/terms/billing/">here</a>.
+</div>
+
+<div class="CC-static-form CC-stripe-form">
+    <form action="" method="POST" id="payment-form">{% csrf_token %}
+        <fieldset>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="id_card_number">Credit card number:</label>
+                        <input class="card-number form-control" id="id_card_number" maxlength="20"  type="text" />
+                        <div class="CC-creditcards">
+                            <i class="fa fa-cc-visa fa-2x"></i>
+                            <i class="fa fa-cc-mastercard fa-2x"></i>
+                            <i class="fa fa-cc-amex fa-2x"></i>
+                            <i class="fa fa-cc-discover fa-2x"></i>
+                        </div>
+                        {% if error %}
+                        <label class="error">{{ error }}</label>
+                        {% endif %}
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="id_card_cvv">Card CVC:</label>
+                                <input class="card-cvv form-control" id="id_card_cvv" maxlength="4"  type="text" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                {{ zebra_form.email.label_tag }}
+                                {{ zebra_form.email }}
+                            </div>
+                        </div>
+                    </div><!-- /row -->
+
+                    <div class="form-group">
+                        <label for="id_card_expiry_month">Expiration:</label><br />
+                        {{ zebra_form.card_expiry_month }}
+                        <div class="hidden">{{ zebra_form.card_expiry_year.label_tag }}</div>
+                        {{ zebra_form.card_expiry_year }}
+                    </div>
+
+                    <div class="form-group CC-plan-selection">
+                        <label class="sr-only">Payment Options:</label>
+                        {% for radio in zebra_form.plan %}
+                        <div class="radio">{{ radio|safe }}</div>
+                        {% endfor %}
+                    </div>
+
+                    {{ zebra_form.last_4_digits }}
+                    {{ zebra_form.stripe_token }}
+
+                    <noscript><h3>Note:&nbsp; this form requires Javascript to use.</h3></noscript>
+                    <button type="submit" class="btn btn-default CC-modal-submit-button CC-modal-submit-green">Submit Payment</button>
+                    <span class="payment-errors"></span>
+
+                </div><!-- /col-md-6 -->
+            </div><!-- /row -->
+        </fieldset>
+    </form>
+</div><!-- /CC-stripe-form -->
+{% endblock %}

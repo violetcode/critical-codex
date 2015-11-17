@@ -1,0 +1,13 @@
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <ul id="bottom-nav" class="list-inline">
+            <li><a href="{% url 'static-about' %}">About</a></li>
+            <li><a href="{% url 'static-tour' %}">Tour</a></li>
+            <li><a href="{% url 'static-faq' %}">FAQ</a></li>
+            <li><a href="{% url 'static-terms' %}">Terms</a></li>
+            <li><a href="{% url 'static-privacy' %}">Privacy</a></li>
+        </ul>
+        <small id="copyright">Copyright &copy; {{site_name}} {% now "Y" %} — All content &copy; their respective owners.<br />
+            By using this site you are agreeing to the <a href="{% url 'static-terms' %}">Terms of Use</a> and <a href="{% url 'static-privacy' %}">Privacy Policy</a>.</small>
+    </div>
+</footer>

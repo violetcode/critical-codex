@@ -1,0 +1,138 @@
+#user-info {
+    margin-top: 20px;
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-right: 20px;
+        border-radius: 4px;
+    }
+
+    .username {
+        margin-top: 10px;
+        color: #666;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .list-unstyled {
+        margin-top: 20px;
+        padding: 10px 0;
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        i {
+            opacity: .4;
+        }
+    }
+}
+
+.user-list h3,
+.user-sidebar h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.user-list ul li {
+    border-bottom: 1px solid #dededc;
+    padding: 8px 4px;
+}
+
+.profile-lead {
+    display: block;
+    position: relative;
+    height: 350px;
+    background: #dededc no-repeat center center;
+    background-size: cover;
+}
+
+.profile-blank-lead {
+    background: url('../img/cover.jpg') center center no-repeat;
+}
+
+.profile-inner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+section.profile-avatar {
+    position: absolute;
+    bottom: -20px;
+}
+
+nav.profile-nav {
+    border-bottom: 1px solid #d5d5d5;
+    background: #FFF;
+    padding: 12px 0 4px;
+    font-size: 18px;
+
+    .list-inline li {
+        margin-right: 20px;
+    }
+
+    .item-counts {font-weight: bold;}
+}
+
+.profile-details {padding-left: 10px;}
+
+.profile-title {
+    h2 {font-weight: 100; margin: 0;}
+    h4 {margin: 0;}
+}
+
+.profile-title, .profile-bio {margin-bottom: 15px;}
+
+.profile-bio,
+.profile-info {
+    @codex-size-base: 14px;
+    p {
+        font-size: @codex-size-base;
+        line-height: floor((@codex-size-base * @line-height-base));
+    }
+}
+
+.user-sidebar ul li {
+    border-bottom: 1px solid #dededc;
+    padding: 8px 4px;
+}
+
+.user-sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+
+/* card */
+
+.acct-panel-background {
+    display: block;
+    min-height: 175px;
+    padding: 50px 0;
+    background: #dededc no-repeat center center;
+    background-size: cover;
+}
+
+.acct-panel-username {
+    position: relative;
+    margin-top: -32px;
+
+    img {
+        width: 72px;
+        height: auto;
+        border: 3px solid #fff;
+    }
+
+    .media {
+        position: relative;
+        margin-top: -32px;
+
+        .media-body { padding-top: 28px;}
+
+    }
+}

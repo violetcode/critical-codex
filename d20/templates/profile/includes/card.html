@@ -1,0 +1,30 @@
+{% load humanize %}{% load utils_tags %}
+
+{% block css %}
+<style id="user-style-{{user}}">
+.acct-panel-background {
+    {% if user.image %}
+    background-image: url( {{user.image.url}} );
+    {% else %}
+    background-image: url( {{STATIC_URL}}img/profile_head_small.jpg);
+    {% endif %}
+}
+</style>
+{% endblock %}
+
+<div class="panel panel-default acct-panel">
+    <ul class="list-group">
+        <li class="list-group-item acct-panel-background"></li>
+        <li class="list-group-item acct-panel-username">
+            <div class="media">
+                <a class="pull-left" href="{% url 'Core:AccountSettings' %}">
+                    <img class="media-object" width="96" height="96" src="https://secure.gravatar.com/avatar/{{ user|email_hash }}?s=192&amp;d={{STATIC_URL}}img/gravatar_medium.png" alt="{{ user }}">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="{% url 'Core:AccountSettings' %}">{{ user }}</a></h4>
+                    {% if user.is_premium %}Premium{% else %}Free{% endif %} Account
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

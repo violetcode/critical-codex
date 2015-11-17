@@ -1,0 +1,21 @@
+{% extends "core/account/base.html" %}{% load humanize %}{% load utils_tags %}
+
+{% block title %}Deactivate Your Account | {% endblock %}
+
+{% block content-inner-header %}
+<h2>Cancel your Premium Membership</h2>
+{% endblock %}
+
+{% block content-inner %}
+<p>Are you sure you don't want to reconsider?</p>
+<hr />
+
+<form class="wide" action="." method="post">
+  {% csrf_token %}
+  <p class="submit">
+      <input type="submit" class="btn btn-danger" value="Cancel Premium">
+      <a href="{% url 'Core:AccountSettings' %}" class="btn btn-default" role="button">Cancel</a>
+  </p>
+</form>
+
+{% endblock %}

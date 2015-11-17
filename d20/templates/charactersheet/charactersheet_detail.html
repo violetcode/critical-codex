@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block page %}charactersheet charactersheet-detail page{% endblock %}
+
+{% block content-wrapper %}
+{% include "includes/header.html" %}
+
+<section id="content">
+    <header class="site-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8"><h2>{{ object.name }}</h2></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-inner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <ol class="breadcrumb">
+                    <li><a href="#">Characters</a></li>
+                    <li><a href="#">{{ object.player }}</a></li>
+                    <li class="active">{{ object.name }}</li>
+                </ol>
+            </div><!-- /col-md-6 -->
+
+            <div class="col-md-6">
+                <a class="btn btn-default" href="#" role="button"><i class="fa fa-print"></i> View/Print PDF</a>
+                <a class="btn btn-primary" href="#" role="button"><i class="fa fa-files-o"></i> Copy Character</a>
+                <a class="btn btn-primary" href="{% url 'Charactersheet:Charactersheet-Edit' object.slug %}" role="button">
+                    <i class="fa fa-files-o"></i> Edit
+                </a>
+            </div><!-- /col-md-6 -->
+        </div><!-- /row -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="pull-right"><i class="fa fa-caret-square-o-down"></i></span>
+                        <h3 class="panel-title">Abilities</h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Strength <small>STR</small>: {{ object.str_score }}</li>
+                        <li class="list-group-item">Dexterity <small>DEX</small>: {{ object.dex_score }}</li>
+                        <li class="list-group-item">Constitution <small>CON</small>: {{ object.con_score }}</li>
+                        <li class="list-group-item">Intelligence <small>INT</small>: {{ object.int_score }}</li>
+                        <li class="list-group-item">Wisdom <small>WIS</small>: {{ object.wis_score }}</li>
+                        <li class="list-group-item">Charisma <small>CHA</small>: {{ object.cha_score }}</li>
+                    </ul>
+                </div><!-- /panel -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Saving Throws</h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Fortitude (CON): {{ object.fort_save }}</li>
+                        <li class="list-group-item">Reflex (DEX): {{ object.reflex_save }}</li>
+                        <li class="list-group-item">Will (WIS): {{ object.will_save }}</li>
+                    </ul>
+                </div><!-- /panel -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">AC <small>Armor Class</small></h3>
+                    </div>
+                    <ul class="list-group">
+                    </ul>
+                </div><!-- /panel -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Initiative</h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Modifier: {{ object.init_mod }}</li>
+                    </ul>
+                </div><!-- /panel -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Attacks (Weapons)</h3>
+                    </div>
+                    <ul class="list-group">
+                    </ul>
+                </div>
+
+            </div><!-- /col-md-6 -->
+
+            <div class="col-md-6">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Speed</h3>
+                    </div>
+                    <ul class="list-group">
+                    </ul>
+                </div><!-- /panel -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">HP <small>Hit Points</small></h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Current: {{ object.current_hp }}</li>
+                        <li class="list-group-item">Total: {{ object.hp_total }}</li>
+                    </ul>
+                </div><!-- /panel -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Level</h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Experiance Points <span class="text-right">{{ object.xp }}</span></li>
+                        <li class="list-group-item">Level</li>
+                        <li class="list-group-item">Next Level</li>
+                    </ul>
+                </div><!-- /panel -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Skills</h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Acrobatics: {{ object.acro_skill }}</li>
+                        <li class="list-group-item">Appraise: {{ object.appraise_skill }}</li>
+                        <li class="list-group-item">Bluff: {{ object.bluff_skill }}</li>
+                        <li class="list-group-item">Climb: {{ object.climb_skill }}</li>
+                        <li class="list-group-item">Craft {{ object.craft1_name }}: {{ object.craft1_skill }}</li>
+                        <li class="list-group-item">Craft {{ object.craft2_name }}: {{ object.craft2_skill }}</li>
+                        <li class="list-group-item">Craft {{ object.craft3_name }}: {{ object.craft3_skill }}</li>
+                        <li class="list-group-item">Diplomacy: {{ object.diplomacy_skill }}</li>
+                        <li class="list-group-item">Disable Device: {{ object.disable_dev_skill }}</li>
+                        <li class="list-group-item">Disguise: {{ object.disguise_skill }}</li>
+                        <li class="list-group-item">Escape Artist: {{ object.escape_art_skill }}</li>
+                        <li class="list-group-item">Fly: {{ object.fly_skill }}</li>
+                        <li class="list-group-item">Handle Animal: {{ object.handle_animal_skill }}</li>
+                        <li class="list-group-item">Heal: {{ object.heal_skill }}</li>
+                        <li class="list-group-item">Intimidate: {{ object.intimidate_skill }}</li>
+                        <li class="list-group-item">Knowledge (Arcana): {{ object.arcana_skill }}</li>
+                        <li class="list-group-item">Knowledge (Dungeoneering): {{ object.dungeon_skill }}</li>
+                        <li class="list-group-item">Knowledge (Engineering): {{ object.engineering_skill }}</li>
+                        <li class="list-group-item">Knowledge (Geography): {{ object.geography_skill }}</li>
+                        <li class="list-group-item">Knowledge (History): {{ object.history_skill }}</li>
+                        <li class="list-group-item">Knowledge (Local): {{ object.local_skill }}</li>
+                        <li class="list-group-item">Knowledge (Nature):{{ object.nature_skill }}</li>
+                        <li class="list-group-item">Knowledge (Nobility): {{ object.nobility_skill }}</li>
+                        <li class="list-group-item">Knowledge (Planes): {{ object.planes_skill }}</li>
+                        <li class="list-group-item">Knowledge (Religion): {{ object.religion_skill }}</li>
+                        <li class="list-group-item">Linguistics: {{ object.linguistics_skill }}</li>
+                        <li class="list-group-item">Perception: {{ object.perception_skill }}</li>
+                        <li class="list-group-item">Perform ({{ object.perform1_name }}): {{ object.perform1_skill }}</li>
+                        <li class="list-group-item">Perform ({{ object.perform2_name }}): {{ object.perform2_skill }}</li>
+                        <li class="list-group-item">Profession ({{ object.prof1_name }}): {{ object.prof1_skill }}</li>
+                        <li class="list-group-item">Profession: ({{ object.prof2_name }}): {{ object.prof2_skill }}</li>
+                        <li class="list-group-item">Ride: {{ object.ride_skill }}</li>
+                        <li class="list-group-item">Sense Motive: {{ object.sense_motive_skill }}</li>
+                        <li class="list-group-item">Sleight of Hand: {{ object.sleight_skill }}</li>
+                        <li class="list-group-item">Spellcraft: {{ object.spellcraft_skill }}</li>
+                        <li class="list-group-item">Stealth: {{ object.stealth_skill }}</li>
+                        <li class="list-group-item">Survival: {{ object.survival_skill }}</li>
+                        <li class="list-group-item">Swim: {{ object.swim_skill }}</li>
+                        <li class="list-group-item">Use Magic Device: {{ object.use_magic_skill }}</li>
+                    </ul>
+                </div><!-- /panel -->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Misc</h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Created on: {{ object.created }}</li>
+                        <li class="list-group-item">Last Updated: {{ object.last_updated }}</li>
+                        <li class="list-group-item">Game: {{ object.sheet_type }}</li>
+                    </ul>
+                </div><!-- /panel -->
+
+            </div><!-- /col-md-6 -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+    </div><!-- /container-inner -->
+</section>
+
+{% include "includes/footer.html" %}
+{% endblock %}

@@ -1,0 +1,8 @@
+<div id="form-comment">
+    <form action="/comments/post/" method="post">{% csrf_token %}
+        {{ form.as_p }}
+
+            <input type="submit" value="Submit Comment"/>
+            <a href="#c0" id="cancel_reply">cancel reply</a>
+    </form>
+</div>

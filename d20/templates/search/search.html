@@ -1,0 +1,45 @@
+{% extends 'base.html' %}{% load pagination %}{% load humanize %}{% load highlight %}
+
+{% block page %}page search-results{% endblock %}
+
+{% block content-wrapper %}
+{% include "includes/header.html" %}
+<section id="content">
+	<header class="site-head">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<h2>Results for '{{query}}' <small>(page {{ page.object_list|length }} of {{ page.paginator.count }})</small></h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="content-inner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<ul class="list-unstyled results">
+					{% for result in page.object_list %}
+						<li class="result">
+							<a href="{% url 'Charactersheet:Charactersheet-Detail' result.object.slug %}">{{ result.object.name|striptags|safe }}</a>
+							<small>Created: {{ result.object.created|naturaltime }}, last updated: ({{ result.object.last_updated|naturaltime }})</small>
+							<div class="summary">{% highlight result.object.description with query %}</div>
+						</li>
+					{% empty %}
+						<p>No results found.</p>
+					{% endfor %}
+					</ul>
+					{% if page.has_previous or page.has_next %}
+					{% pagination page %}
+					{% endif %}
+				</div>
+				<div class="col-md-4">
+					{% if not user.is_premium %}{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% include "includes/footer.html" %}
+{% endblock %}

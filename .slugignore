@@ -1,0 +1,7 @@
+static_assets
+dist
+node_modules
+grunt
+
+package.json
+gruntfile.js

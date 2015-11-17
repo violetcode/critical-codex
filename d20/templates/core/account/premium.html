@@ -1,0 +1,53 @@
+{% extends "core/account/base.html" %}{% load humanize %}{% load utils_tags %}
+
+{% block title %}Premium Account Settings | {% endblock %}
+
+{% block content-inner-header %}
+<h2>Premium Settings</h2>
+{% endblock %}
+
+{% block content-inner %}
+<p>Edit your premium membership settings.</p>
+
+<hr />
+
+    {% if user.is_premium %}
+    <p clas="lead">Premium Membership is currently active.</p>
+
+    <form method="post" action="" class="wide" id="UserSettings">{% csrf_token %}
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="sr-only" for="id_first_name">Sie Layout:</label>
+                    {{ form.feed_column_size }}
+                    <span class="help-block">Site Layout (Where applicable)</span>
+                </div>
+                <div class="col-md-6">
+                    <label class="sr-only" for="id_last_name">Feed Size:</label>
+                    {{ form.feed_size }}
+                    <span class="help-block">Amount of news items viewable per feed</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group has-warning{% if form.is_beta.errors %}has-error{% endif %}">
+            <label for="id_is_beta">Enable Beta Features?</label><br />
+            {% for radio in form.is_beta %}
+            <label class="radio-inline" for="{{ radio.id_for_label }}">{{ radio }}</label>
+            {% endfor %}
+            <span class="help-block">Beta features are often experimental, and could break the site for you. Enable at your own risk!</span>
+        </div>
+
+        <input type="submit" class="btn btn-default" value="Save">
+    </form>
+
+    <hr />
+
+    <a href="{% url 'Core:cancel-premium' %}">Cancel my Premium Subscription</a>
+
+    {% else %}
+    <p clas="lead">You currently do not have a premium membership.</p>
+    <a href="{% url 'Core:Upgrade' %}" class="btn btn-default" role="button">Upgrade Now?</a>
+    {% endif %}
+
+{% endblock %}

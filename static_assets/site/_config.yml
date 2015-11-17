@@ -1,0 +1,37 @@
+safe: false
+port: 4000
+base-url:    /
+
+gems:
+  - jekyll-sitemap
+
+source:      ./
+destination: ../_gh_pages
+plugins:     ./_plugins
+
+future:      true
+lsi:         false
+highlighter: true
+markdown:    kramdown
+permalink:   pages/:title
+
+rdiscount:
+  extensions: []
+
+
+exclude: [
+    dist,
+    Gemfile,
+    Gemfile.lock,
+    Procfile,
+    gruntfile.js,
+    package.json,
+    composer.json,
+    s3_website.yml
+]
+
+
+# Custom vars
+current_version:  0.0.1
+repo: https://github.com/underlost/d20.net
+site: http://d20.underlost.net/

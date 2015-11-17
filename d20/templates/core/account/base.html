@@ -1,0 +1,45 @@
+{% extends "base.html" %}{% load humanize %}{% load utils_tags %}
+
+{% block title %}Edit your profile | {% endblock %}
+{% block page %}account{% endblock %}
+
+{% block header %}
+    {% include "includes/header.html" %}
+{% endblock %}
+
+{% block content-wrapper %}
+<section id="content">
+    <header class="site-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">{% block content-inner-header %}{% endblock %}</div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </header>
+    <div class="content-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    {% include "profile/includes/card.html" %}
+                    {% include "core/includes/account_nav.html" %}
+
+                    {% if not user.is_premium %}
+                    {% include "core/includes/ad_sidebar.html" %}
+                    {% endif %}
+
+                </div>
+                <div class="col-md-8">
+                    <div class="well well-default well-codex">
+                        {% block content-inner %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+    {% include "includes/footer.html" %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content-wrapper %}
+{% include "includes/header.html" %}
+<section id="content">
+    <header class="site-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">{% block content-heading %}{% endblock %}</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}{% endblock %}
+                </div>
+                <div class="col-md-4">
+                    {% block content-sidebar %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "includes/footer.html" %}
+{% endblock %}

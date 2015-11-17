@@ -1,0 +1,880 @@
+{% extends "base.html" %}
+{% block page %}charactersheet charactersheet-detail charactersheet-edit page{% endblock %}
+{% block extra %}
+<base href="/characters/">
+{% endblock %}
+{% block content-wrapper %}
+{% include "includes/header.html" %}
+<section id="content">
+    <div ng-controller="CharacterController as ctrl">
+        <header class="site-head">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8"><h2>{[{c.name}]}</h2></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#chardetailsbody" aria-expanded="true" aria-controls="chardetailsbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Character Details</h3>
+                            </div>
+                            <div id="chardetailsbody" class="panel-body collapse in">
+                                <div class="col-md-6 form-horizontal label-left">
+                                    <div class="form-group">
+                                        <label for="inputCharName" class="col-sm-2 control-label">Name</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control input-sm" id="inputCharName" placeholder="Character Name" ng-model="c.name">
+                                        </div>
+                                    </div><!-- /form-group name -->
+                                    <div class="form-group">
+                                        <label for="inputCharAlignment" class="col-sm-4 control-label">Alignment</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control input-sm" id="inputCharAlignment" ng-model="c.alignment">
+                                                <option ng-repeat="opt in alignments">{[{opt}]}</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- /form-group alignment -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharDeity" class="col-sm-2 control-label">Deity</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control input-sm" id="inputCharDeity" placeholder="Deity" ng-model="c.deity">
+                                        </div>
+                                    </div><!-- /form-group deity -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharRace" class="col-sm-2 control-label">Race</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control input-sm" id="inputCharRace" placeholder="Race" ng-model="c.race">
+                                        </div>
+                                    </div><!-- /form-group race -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharGender" class="col-sm-3 control-label">Gender</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control input-sm" id="inputCharGender" ng-model="c.gender">
+                                                <option ng-repeat="opt in genders">{[{opt}]}</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- /form-group gender -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharHeight" class="col-sm-3 control-label">Height</label>
+                                        <div class="col-sm-9">
+                                            <input class="form-control input-sm" id="inputCharHeight" placeholder="Height" ng-model="c.height">
+                                        </div>
+                                    </div><!-- /form-group weight -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharHair" class="col-sm-2 control-label">Hair</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control input-sm" id="inputCharHair" placeholder="Hair Color" ng-model="c.hair">
+                                        </div>
+                                    </div><!-- /form-group Hair -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharXP" class="col-sm-6 control-label">Experience Points</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control input-sm" id="inputCharXP" placeholder="XP" type="number" ng-model="c.xp">
+                                        </div>
+                                    </div><!-- /form-group next-level -->
+
+                                </div><!-- /col-md-6 -->
+
+                                <div class="col-md-6 form-horizontal label-left">
+                                    <div class="form-group">
+                                        <label for="inputCharLevel" class="col-sm-2 control-label">Level</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control input-sm" id="inputCharLevel" placeholder="Character Level" type="number" ng-model="c.level">
+                                        </div>
+                                    </div><!-- /form-group level -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharClass" class="col-sm-2 control-label">Class</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control input-sm" id="inputCharClass" placeholder="Class" ng-model="c.char_class">
+                                        </div>
+                                    </div><!-- /form-group class -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharHomeland" class="col-sm-4 control-label">Homeland</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control input-sm" id="inputCharHomeland" placeholder="Homeland" ng-model="c.homeland">
+                                        </div>
+                                    </div><!-- /form-group homeland -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharSize" class="col-sm-2 control-label">Size</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control input-sm" id="inputCharSize" placeholder="Size" ng-model="c.size" ng-change="updateSize(c.size)">
+                                                <option ng-repeat="size in size_options">{[{size}]}</option>
+                                            </select>
+                                        </div>
+                                    </div><!-- /form-group size -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharAge" class="col-sm-2 control-label">Age</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control input-sm" id="inputCharAge" placeholder="Age" type="number" ng-model="c.age">
+                                        </div>
+                                    </div><!-- /form-group age -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharWeight" class="col-sm-3 control-label">Weight</label>
+                                        <div class="col-sm-9">
+                                            <input class="form-control input-sm" id="inputCharWeight" placeholder="Weight" ng-model="c.weight">
+                                        </div>
+                                    </div><!-- /form-group weight -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharEyes" class="col-sm-2 control-label">Eyes</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control input-sm" id="inputCharEyes" placeholder="Eyes" ng-model="c.eyes">
+                                        </div>
+                                    </div><!-- /form-group eyes -->
+
+                                    <div class="form-group">
+                                        <label for="inputCharNexlvl" class="col-sm-4 control-label">Next Level</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control input-sm" id="inputCharNexlvl" placeholder="until Next Level" type="number" ng-model="c.next_level">
+                                        </div>
+                                    </div><!-- /form-group next-level -->
+                                </div><!-- /col-md-6 -->
+                                <div class="form-group form-horizontal label-left">
+                                    <label for="inputLanguage" class="col-sm-2 control-label">Languages</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control input-sm" id="inputLanguage" placeholder="Languages" ng-model="c.languages">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#abilitiesbody" aria-expanded="true" aria-controls="abilitiesbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Abilities</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="abilitiesbody">
+                                <div class="row form-group">
+                                    <div class="col-xs-3"><b>Ability</b>
+                                    </div>
+                                    <div class="col-xs-3"><b>Score</b>
+                                    </div>
+                                    <div class="col-xs-3"><b>Temp. Adjustment</b>
+                                    </div>
+                                    <div class="col-xs-3"><b>Mod</b>
+                                    </div>
+                                </div>
+                                <div class="row form-group" ng-repeat="abil in abils">
+                                    <div class="col-xs-3"><b>{[{abil | uppercase}]}</b>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input class="form-control input-sm" type="number" ng-model="c[abil].score" ng-change="updateAbil(abil, c[abil])" required>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input class="form-control input-sm" type="number"  ng-model="c[abil].temp" ng-change="updateAbil(abil, c[abil])" required>
+                                    </div>
+                                    <div class="col-xs-3">{[{c[abil].mod}]}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#savebody" aria-expanded="true" aria-controls="savebody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Saving Throws</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="savebody">
+                                <div class="row form-group">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-1"><small><b>Total</b></small>
+                                    </div>
+                                    <div class="col-xs-2"><small><b>Base</b></small>
+                                    </div>
+                                    <div class="col-xs-1"><small><b>Mod</b></small>
+                                    </div>
+                                    <div class="col-xs-2"><small><b>Magic Mod</b></small>
+                                    </div>
+                                    <div class="col-xs-2"><small><b>Misc Mod</b></small>
+                                    </div>
+                                    <div class="col-xs-2"><small><b>Temp Mod</b></small>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-2"><b>Fortitude (CON):</b>
+                                    </div>
+                                    <div class="col-xs-1">{[{c.fort.total}]} =</div>
+                                    <div class="col-xs-2">
+                                        <input class="form-control input-sm" type="number" ng-model="c.fort.base" ng-change="updateSaves()" required>
+                                    </div>
+                                    <div class="col-xs-1"><span><small>+</small></span> {[{c.con.mod}]}</div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" type="number" ng-model="c.fort.magic" ng-change="updateSaves()" required>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" type="number" ng-model="c.fort.misc" ng-change="updateSaves()" required>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" type="number" ng-model="c.fort.temp" ng-change="updateSaves()" required>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-2"><b>Reflex (DEX):</b>
+                                    </div>
+                                    <div class="col-xs-1">{[{c.reflex.total}]} =</div>
+                                    <div class="col-xs-2">
+                                        <input class="form-control input-sm" type="number" ng-model="c.reflex.base" ng-change="updateSaves()" required>
+                                    </div>
+                                    <div class="col-xs-1"><span><small>+</small></span> {[{c.dex.mod}]}</div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" type="number" ng-model="c.reflex.magic" ng-change="updateSaves()" required>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" type="number" ng-model="c.reflex.misc" ng-change="updateSaves()" required>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" type="number" ng-model="c.reflex.temp" ng-change="updateSaves()" required>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-2"><b>Will (WIS):</b>
+                                    </div>
+                                    <div class="col-xs-1">{[{c.will.total}]} =</div>
+                                    <div class="col-xs-2">
+                                        <input class="form-control input-sm" type="number" ng-model="c.will.base" ng-change="updateSaves()" required>
+                                    </div>
+                                    <div class="col-xs-1"><span><small>+</small></span> {[{c.wis.mod}]}</div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" type="number" ng-model="c.will.magic" ng-change="updateSaves()" required>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" type="number" ng-model="c.will.misc" ng-change="updateSaves()" required>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" type="number" ng-model="c.will.temp" ng-change="updateSaves()" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#cmbody" aria-expanded="true" aria-controls="cmbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Combat Maneuvers</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="cmbody">
+                                <div class="row">
+                                    <div class="col-xs-6"><b>Base Attack Bonus</b></div>
+                                    <div class="col-xs-6"><input class="form-control" type="number" ng-model="c.base_attack" ng-change="updateBAB()"></div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-1"><small><b>Total</b></small></div>
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-1"><small><b>BAB</b></small></div>
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-1"><small><b>Modifier</b></small></div>
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-1"><small><b>Size</b></small></div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-2"><b>CMB</b></div>
+                                    <div class="col-xs-1">{[{c.cmb}]}</div>
+                                    <div class="col-xs-1">=</div>
+                                    <div class="col-xs-1">{[{c.base_attack}]}</div>
+                                    <div class="col-xs-1">+</div>
+                                    <div class="col-xs-1">{[{c.cmb_mod}]}</div>
+                                    <div class="col-xs-1">+</div>
+                                    <div class="col-xs-1">{[{-c.size_mod}]}</div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-1"><small><b>Total</b></small></div>
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-1"><small><b>BAB</b></small></div>
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-1"><small><b>Str</b></small></div>
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-1"><small><b>Dex</b></small></div>
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-1"><small><b>Size</b></small></div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-2"><b>CMD</b></div>
+                                    <div class="col-xs-1">{[{c.cmd}]}</div>
+                                    <div class="col-xs-1">=</div>
+                                    <div class="col-xs-1">{[{c.base_attack}]}</div>
+                                    <div class="col-xs-1">+</div>
+                                    <div class="col-xs-1">{[{c.str.mod}]}</div>
+                                    <div class="col-xs-1">+</div>
+                                    <div class="col-xs-1">{[{c.dex.mod}]}</div>
+                                    <div class="col-xs-1">+</div>
+                                    <div class="col-xs-1">{[{-c.size_mod}]}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#weaponsbody" aria-expanded="true" aria-controls="weaponsbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Attacks (Weapons)</h3>
+                            </div>
+                            <ul class="list-group weapon-details collapse in" id="weaponsbody">
+                                <li class="list-group-item weapon-item ui-state-default" ng-repeat="weapon in c.weapons">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <span class="trash" ng-click="deleteWeapon(weapon)"><i class="fa fa-trash-o"></i></span>
+                                            <label><b><small>Weapon</small></b></label>
+                                            <input class="form-control input-sm" placeholder="Weapon Name" ng-model="weapon.name">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label><b><small>Attack Bonus</small></b></label>
+                                            <input class="form-control input-sm" placeholder="Attack Bonus" ng-model="weapon.attack_bonus">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label><b><small>Critical</small></b></label>
+                                            <input class="form-control input-sm" placeholder="Crit" ng-model="weapon.crit_range">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <label><b><small>Type</small></b></label>
+                                            <input class="form-control input-sm" placeholder="Type" ng-model="weapon.weapon_type">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label><b><small>Range</small></b></label>
+                                            <div class="input-group">
+                                                <input class="form-control input-sm"  placeholder="Range" ng-model="weapon.weapon_range">
+                                                <div class="input-group-addon">ft.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label><b><small>Ammunition</small></b></label>
+                                            <input class="form-control input-sm"  placeholder="Ammunition" ng-model="weapon.ammunition">
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <label><b><small>Damage</small></b></label>
+                                            <input class="form-control input-sm" placeholder="Damage" ng-model="weapon.damage">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item add-area form-group">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <label for="weapon-name" class="sr-only"><b><small>Weapon</small></b></label>
+                                            <input id="weapon-name" class="form-control input-sm" placeholder="New Weapon Name" ng-model="c.new_weapon.name">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label for="attack-bonus" class="sr-only"><b><small>Attack Bonus</small></b></label>
+                                            <input id="attack-bonus" class="form-control input-sm" placeholder="Attack Bonus" ng-model="c.new_weapon.attack_bonus">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label for="critical" class="sr-only"><b><small>Critical</small></b></label>
+                                            <input id="critical" class="form-control input-sm" placeholder="Crit" ng-model="c.new_weapon.crit_range">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <label for="weapon-type" class="sr-only"><b><small>Type</small></b></label>
+                                            <input id="weapon-type" class="form-control input-sm" placeholder="Type" ng-model="c.new_weapon.weapon_type">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label for="weapon-range" class="sr-only"><b><small>Range</small></b></label>
+                                            <div class="input-group">
+                                                <input id="weapon-range" class="form-control input-sm"  placeholder="Range" ng-model="c.new_weapon.weapon_range">
+                                                <div class="input-group-addon">ft.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <label for="ammo" class="sr-only"><b><small>Ammunition</small></b></label>
+                                            <input id="ammo" class="form-control input-sm"  placeholder="Ammunition" ng-model="c.new_weapon.ammunition">
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <label for="weapon-damage" class="sr-only"><b><small>Damage</small></b></label>
+                                            <input id="weapon-damage" class="form-control input-sm" placeholder="Damage" ng-model="c.new_weapon.damage">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 col-xs-offset-3">
+                                            <a class="btn btn-default btn-block" id="weapon-button" href="#" ng-click="addWeapon()">Add Weapon</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#featsbody" aria-expanded="true" aria-controls="featsbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Feats</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="featsbody">
+                                <div class="row form-group">
+                                    <div class="col-xs-6" ng-repeat="feat in c.feats"><span class="trash" ng-click="deleteFeat(feat)" title="Delete feat"><i class="fa fa-trash-o"></i></span> {[{feat}]}
+                                    </div>
+                                    <div class="col-xs-6" ng-repeat="feat in c.custom_feats"><span ng-click="deleteCustomFeat(feat)" title="Delete feat"><i class="fa fa-trash-o"></i></span> {[{feat}]}
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div id="featprefetch" class="col-xs-9">
+                                        <input class="typeahead form-control" type="text" id="featfield" placeholder="Add a Feat">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <a class="btn btn-default btn-block" href="#" role="button" ng-click="addFeat()">Add</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#acitembody" aria-expanded="true" aria-controls="acitembody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">AC Items</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="acitembody">
+                                Put AC stuff here.
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#speedbody" aria-expanded="true" aria-controls="speedbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Speed</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="speedbody">
+                                <div class="row form-group">
+                                    <div class="col-xs-3"><b>Base</b></div>
+                                    <div class="col-xs-3">
+                                        <div class="input-group">
+                                            <input class="form-control"  ng-model="c.speeds.base">
+                                            <div class="input-group-addon">ft.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3"><b>With Armor</b></div>
+                                    <div class="col-xs-3">
+                                        <div class="input-group">
+                                            <input class="form-control"  ng-model="c.speeds.armor">
+                                            <div class="input-group-addon">ft.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-3"><b>Fly</b></div>
+                                    <div class="col-xs-3">
+                                        <div class="input-group">
+                                            <input class="form-control"  ng-model="c.speeds.fly">
+                                            <div class="input-group-addon">ft.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3"><b>Swim</b></div>
+                                    <div class="col-xs-3">
+                                        <div class="input-group">
+                                            <input class="form-control"  ng-model="c.speeds.swim">
+                                            <div class="input-group-addon">ft.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-xs-3"><b>Climb</b></div>
+                                    <div class="col-xs-3">
+                                        <div class="input-group">
+                                            <input class="form-control"  ng-model="c.speeds.climb">
+                                            <div class="input-group-addon">ft.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3"><b>Burrow</b></div>
+                                    <div class="col-xs-3">
+                                        <div class="input-group">
+                                            <input class="form-control"  ng-model="c.speeds.burrow">
+                                            <div class="input-group-addon">ft.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#assetbody" aria-expanded="true" aria-controls="assetbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Money and Loot</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="assetbody">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <label for="platinum"><small><b>Platinum</b></small></label>
+                                        <input id="platinum" class="form-control input-sm" type="number" ng-model="c.money.platinum">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <label for="gold"><small><b>Gold</b></small></label>
+                                        <input id="gold" class="form-control input-sm" type="number" ng-model="c.money.gold">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <label for="silver"><small><b>Silver</b></small></label>
+                                        <input id="silver" class="form-control input-sm" type="number" ng-model="c.money.silver">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <label for="copper"><small><b>Copper</b></small></label>
+                                        <input id="copper" class="form-control input-sm" type="number" ng-model="c.money.copper">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="loot"><small><b>Loot</b></small></label>
+                                    <textarea id="loot" class="form-control input-sm text-area" ng-model="c.loot"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#assetbody" aria-expanded="true" aria-controls="assetbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Character Description</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="assetbody">
+                                <div class="form-group form-horizontal">
+                                    <label for="desc" class="sr-only">Description</label>
+                                    <textarea id="desc" class="form-control input-sm text-area" placeholder="Character Description" ng-model="c.desc"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /col-md-6 -->
+
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#hpbody" aria-expanded="true" aria-controls="hpbody">
+                                <div class="row">
+                                    <div class="pull-right">
+                                        <i class="fa fa-caret-square-o-down"></i>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <h3 class="panel-title">HP <small>Hit Points</small></h3>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="progress">
+                                            <div id="hp-progress" class="progress-bar" role="progressbar" aria-valuenow="c.hp_percent" aria-valuemin="0" aria-valuemax="100" style="width: {[{c.hp_percent}]}%; min-width: 2em;">
+                                            {[{c.current_hp}]}/{[{c.hp}]}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body collapse in" id="hpbody">
+                                <div class="row form-group">
+                                    <label for="current-hp" class="col-xs-3"><b>Current HP</b>
+                                    </label>
+                                    <div class="col-xs-3">
+                                        <input id="current-hp" class="form-control input-sm" type="number" ng-model="c.current_hp" ng-change="updateHP()">
+                                    </div>
+                                    <label for="total-hp" class="col-xs-3"><b>Total HP</b>
+                                    </label>
+                                    <div class="col-xs-3">
+                                        <input id="total-hp" class="form-control input-sm" type="number" ng-model="c.hp" ng-change="updateHP()">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <label for="dr" class="col-xs-3"><b>Damage Reduction</b>
+                                    </label>
+                                    <div class="col-xs-3">
+                                        <input id="dr" class="form-control input-sm" type="number" ng-model="c.dr">
+                                    </div>
+                                    <label for="spell-resist" class="col-xs-3"><b>Spell Resistance</b>
+                                    </label>
+                                    <div class="col-xs-3">
+                                        <input id="spell-resist" class="form-control input-sm" type="number" ng-model="c.spell_resist">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#initbody" aria-expanded="true" aria-controls="initbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Initiative</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="initbody">
+                                <div class="row form-group">
+                                    <div class="col-xs-3"><b>Total</b><br/>{[{c.dex.mod + c.init_mod}]}
+                                    </div>
+                                    <div class="col-xs-1"><br/>=</div>
+                                    <div class="col-xs-3"><b>Dex Mod</b><br/>{[{c.dex.mod}]}
+                                    </div>
+                                    <div class="col-xs-1"><br/>+</div>
+                                    <div class="col-xs-4">
+                                        <label><b>Misc Mod</b></label>
+                                        <input class="form-control input-sm" type="number" ng-model="c.init_mod">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#acbody" aria-expanded="true" aria-controls="acbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">AC <small>Armor Class</small></h3>
+                            </div>
+                            <div class="panel-body collapse in" id="acbody">
+
+                                <div class="row form-group">
+                                    <div class="col-xs-4"><b>AC: </b>{[{c.ac.total}]}
+                                    </div>
+                                    <div class="col-xs-4"><b>Touch: </b>{[{c.ac.touch}]}
+                                    </div>
+                                    <div class="col-xs-4"><b>Flat-footed: </b>{[{c.ac.flat}]}
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <label><small><b>Armor Bonus</b></small></label>
+                                        <input class="form-control input-sm" type="number" ng-model="c.ac.armor" ng-change="updateAC()">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label><small><b>Shield Bonus</b></small></label>
+                                        <input class="form-control input-sm" type="number" ng-model="c.ac.shield" ng-change="updateAC()">
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <small><b>Dex</b></small><br/>
+                                        {[{c.dex.mod}]}
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <small><b>Size</b></small><br/>
+                                        {[{c.size_mod}]}
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label><small><b>Natural Armor</b></small></label>
+                                        <input class="form-control input-sm" type="number" ng-model="c.ac.nat" ng-change="updateAC()">
+
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label><small><b>Deflection</b></small></label>
+                                        <input class="form-control input-sm" type="number" ng-model="c.ac.deflect" ng-change="updateAC()">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label><small><b>Misc Mod</b></small></label>
+                                        <input class="form-control input-sm" type="number" ng-model="c.ac.misc" ng-change="updateAC()">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#skillsbody" aria-expanded="true" aria-controls="skillsbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Skills</h3>
+                            </div>
+                            <div class="panel-body collapse in" id="skillsbody">
+                                <div class="row">
+                                    <div class="col-xs-5"><b>Skill Name</b>
+                                    </div>
+                                    <div class="col-xs-1"><b>Total</b>
+                                    </div>
+                                    <div class="col-xs-2"><b>Mod</b>
+                                    </div>
+                                    <div class="col-xs-2"><b>Ranks</b>
+                                    </div>
+                                    <div class="col-xs-2"><b>Misc</b>
+                                    </div>
+                                </div>
+                                <div class="row" ng-repeat="skill in c.skills">
+                                    <div class="col-xs-5">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-checked="skill.c_skill" ng-model="skill.c_skill" ng-change="updateSkills()"> <small>{[{skill.name | uppercase}]}</small>
+                                                </br>
+                                                <input class="form-control" ng-model="skill.extra" ng-show="skill.extra">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1">{[{skill.total }]}</div>
+                                    <div class="col-xs-2">= <small>{[{skill.abil | uppercase}]}</small> {[{skill.abil_mod}]}</div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" ng-model="skill.ranks" ng-change="updateSkills()" required>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <span><small>+</small></span>
+                                        <input class="form-control input-sm small-input" ng-model="skill.misc" ng-change="updateSkills()" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7">Total Skill Ranks</div>
+                                    <div class="col-xs-2">{[{c.total_ranks}]}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-collapse" data-toggle="collapse" data-target="#spellbody" aria-expanded="true" aria-controls="spellbody">
+                                <div class="pull-right">
+                                    <i class="fa fa-caret-square-o-down"></i>
+                                </div>
+                                <h3 class="panel-title">Spell Schools</h3>
+                            </div>
+                            <ul class="panel-body list-group collapse in" id="spellbody">
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-9">
+                                            <input class="form-control" type="text" placeholder="New Spell School" ng-model="newSchool">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <a class="btn btn-default btn-block" href="#" role="button" ng-click="addSchool(newSchool)">Add</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" ng-repeat="school in c.spell_schools">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <span class="trash" ng-click="deleteSchool(school)" title="Delete school"><i class="fa fa-trash-o"></i></span>
+                                            <label><small><b>Domain/Specialty School</b></small></label>
+                                            <input class="form-control" ng-model="school.name">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <label><small><b>Spell Modifier</b></small></label>
+                                            <select class="form-control" ng-model="school.spell_mod_full" ng-change="updateSpellMod(school)">
+                                                <option ng-repeat="opt in spell_mods">{[{opt}]}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2"><small><b>Spells Known</b></small></div>
+                                        <div class="col-xs-2"><small><b>Spell Save DC</b></small></div>
+                                        <div class="col-xs-2"><small><b>Level</b></small></div>
+                                        <div class="col-xs-2"><small><b>Spells per Day</b></small></div>
+                                        <div class="col-xs-2"><small><b>Bonus Spells</b></small></div>
+                                    </div>
+                                    <div class="row" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9]">
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" ng-model="school.known_spells[i]" >
+                                        </div>
+                                        <div class="col-xs-2">{[{10 + i + c[school.spell_mod].mod}]}</div>
+                                        <div class="col-xs-2">{[{i}]}</div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" ng-model="school.spells_per_day[i]">
+                                        </div>
+                                        <div class="col-xs-2" ng-if="i > 0">
+                                            <input class="form-control input-sm" ng-model="school.bonus_spells[i-1]">
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class=" col-xs-6">
+                                            <input class="form-control" type="text" options="spellOptions" datasets="spellData" placeholder="Add a Spell" ng-model="school.new_spell_name" sf-typeahead>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control" id="spell-level-field" ng-model="school.new_spell_level" placeholder="Level">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <a class="btn btn-default btn-block" href="#" role="button" ng-click="addSpell(school)">Add</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div ng-repeat="j in [0,2,4,6,8]">
+                                                <p><b>Level {[{j}]} Spells</b></p>
+                                                <div class="row" ng-show="school.spell_list[j].length > 0">
+                                                    <div class="col-xs-6"><small><b>Spell</b></small></div>
+                                                    <div class="col-xs-3"><small><b>Prep</b></small></div>
+                                                    <div class="col-xs-3"><small><b>Used</b></small></div>
+                                                </div>
+                                                <div class="row" ng-repeat="spell in school.spell_list[j]">
+                                                    <div class="col-xs-6" ng-show="spell.spell">{[{spell.spell}]}</div>
+                                                    <div class="col-xs-6" ng-show="spell.custom_spell">{[{spell.custom_spell}]}</div>
+                                                    <div class="col-xs-3"><input class="form-control input-sm" ng-model="spell.prepared"></div>
+                                                    <div class="col-xs-3"><input class="form-control input-sm" ng-model="spell.used"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div ng-repeat="k in [1,3,5,7,9]">
+                                                <p><b>Level {[{k}]} Spells</b></p>
+                                                <div class="row" ng-show="school.spell_list[k].length > 0">
+                                                    <div class="col-xs-6"><small><b>Spell</b></small></div>
+                                                    <div class="col-xs-3"><small><b>Prep</b></small></div>
+                                                    <div class="col-xs-3"><small><b>Used</b></small></div>
+                                                </div>
+                                                <div class="row" ng-repeat="spell in school.spell_list[k]">
+                                                    <div class="col-xs-6" ng-show="spell.spell">{[{spell.spell}]}</div>
+                                                    <div class="col-xs-6" ng-show="spell.custom_spell">{[{spell.custom_spell}]}</div>
+                                                    <div class="col-xs-3"><input class="form-control input-sm" ng-model="spell.prepared"></div>
+                                                    <div class="col-xs-3"><input class="form-control input-sm" ng-model="spell.used"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Misc</h3>
+                            </div>
+                            <ul class="panel-body list-group">
+                                <li class="list-group-item">Created on: {[{c.meta.created | date:"short"}]}</li>
+                                <li class="list-group-item">Last Updated: {[{c.meta.updated | date:"short"}]}</li>
+                                <li class="list-group-item">Game: {[{c.meta.type}]}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- /container -->
+        </div><!-- /container-inner -->
+
+        <nav class="navbar navbar-default navbar-fixed-bottom character-tools">
+            <div class="container">
+                <a class="btn btn-default navbar-btn" href="#" role="button"><i class="fa fa-print"></i> View/Print PDF</a>
+                <a class="btn btn-default navbar-btn" href="#" role="button"><i class="fa fa-files-o"></i> Copy Character</a>
+                <a id="save-button" class="btn btn-primary navbar-btn" href="#" role="button" ng-click="saveChar()">Save Character</a>
+                <a id="delete-button" class="btn btn-warning navbar-btn" href="#" role="button"><i class="fa fa-trash-o"></i></a>
+            </div>
+        </nav>
+
+    </div><!--CharacterController -->
+</section>
+
+{% include "includes/footer.html" %}
+{% endblock %}

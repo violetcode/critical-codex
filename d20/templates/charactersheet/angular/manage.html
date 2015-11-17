@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content-wrapper %}
+
+{% include "includes/header.html" %}
+<section class="content" ng-app="characterManager">
+    <div ng-controller="CharactersController as ctrl">
+        <header class="site-head">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8"><h2>Manage Your Characters</h2></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-inner">
+            <div class="container">
+            	<div class="row">
+            		<div class="alert alert-info" ng-show="flash.getMessage()">
+            			<p>{[{flash.getMessage()}]}</p>
+            		</div>
+            	</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Characters <small>({[{num_chars}]} total)</small></h3>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item" ng-repeat="char in characters">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>{[{char.name}]}</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <a href="/characters/{[{char.slug}]}/edit" class="btn btn-primary" role="button">Edit</a>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <a href="#" class="btn btn-primary" role="button" ng-click="deleteChar(char)">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Create New Character</h3>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <form novalidate>
+									  	<div class="form-group">
+									    	<label for="charName">Character Name</label>
+									    	<input type="text" class="form-control" id="charName" placeholder="Enter name" ng-model="char.name">
+									  	</div>
+									  	<button type="submit" class="btn btn-default" ng-click="createChar()">Create</button>
+									</form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "includes/footer.html" %}
+
+{% endblock %}

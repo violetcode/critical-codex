@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Tyler Rilling -- @underlost
+    Marie VerMurlen -- violetco.de
+
+# TECHNOLOGY COLOPHON
+
+	Django + Gunicorn on Heroku
+    HTML5, CSS3 (LESS)
+    jQuery
+    Bootstrap
+    AngularJS
+    Stripe (For payments)

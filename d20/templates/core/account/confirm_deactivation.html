@@ -1,0 +1,37 @@
+{% extends "core/account/base.html" %}{% load humanize %}{% load utils_tags %}
+
+{% block title %}Deactivate Your Account | {% endblock %}
+
+{% block content-inner-header %}
+<h2>Account Settings</h2>
+{% endblock %}
+
+{% block content-inner %}
+<h3>Confirm Account Deactivation</h3>
+<p>Are you sure you don't want to reconsider?</p>
+<hr />
+
+<p class="lead">Before you deactivate your account, know this:</p>
+
+<ul>
+    <li>If you have a premium account, it will remain active until your account is deleted. if you choose to create a new account, you will need to purchase a new subscription.</li>
+    <li>Your account <strong>will not</strong> be immediately deleted. You'll have roughly 30 days to restore your account.</li>
+    <li>To reactivate your account, you will need to login and follow the directions that appear on screen.</li>
+    <li>Your submitted feeds will not be deleted. Other users will still be free to subscribe to verified feeds.</li>
+    <li>We will only retain your user data for 30 days and then it will be permanently deleted. You can reactivate your account at any point within 30 days of deactivation by logging back in.</li>
+    <li>You don't need to deactivate your account to change your username. You can change it on the settings page. All links and lists will remain unchanged.</li>
+    <li>Your account should be removed from Jaded Gamer within a few minutes, but some content may be viewable on jadedgamer.com for a few days after deactivation.</li>
+    <li>We have no control over content indexed by search engines like Google.</li>
+</ul>
+
+<hr />
+
+<form class="wide" action="." method="post">
+  {% csrf_token %}
+  <p class="submit">
+      <input type="submit" class="btn btn-danger" value="Deactivate account">
+      <a href="{% url 'Core:AccountSettings' %}" class="btn btn-default" role="button">Cancel</a>
+  </p>
+</form>
+
+{% endblock %}

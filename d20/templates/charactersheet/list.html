@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block page %}charactersheet charactersheet-list page{% endblock %}
+
+{% block content-wrapper %}
+{% include "includes/header.html" %}
+
+<section id="content">
+    <header class="site-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8"><h2>{{ head_title }}</h2></div>
+            </div>
+        </div>
+    </header>
+    <div class="content-inner">
+    <div class="container">
+
+        <ul class="nav nav-pills pull-right clearfix">
+            <li class="active"><a href="#">All Characters</a></li>
+            <li><a href="#">My Characters</a></li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Class/Level</th>
+                            <th>Player</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for object in object_list %}
+                        <tr>
+                            <th scope="row"><a href="{% url 'Charactersheet:Charactersheet-Detail' object.slug %}">{{ object.name }}</a></th>
+                            <td>{{ object.char_class }} / {{ object.level }}</td>
+                            <td><a href="{{ object.player.get_absolute_url }}">{{ object.player }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+{% include "includes/footer.html" %}
+{% endblock %}

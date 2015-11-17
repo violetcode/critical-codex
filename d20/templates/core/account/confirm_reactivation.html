@@ -1,0 +1,24 @@
+{% extends "core/account/base.html" %}{% load humanize %}{% load utils_tags %}
+
+{% block title %}Reactivate Your Account | {% endblock %}
+
+{% block content-inner-header %}
+<h2>Account Settings</h2>
+{% endblock %}
+
+{% block content-inner %}
+<h3>Confirm Account Reactivation</h3>
+<p>You about to reactivate your account...</p>
+<hr />
+
+<p class="lead">You are about to fully reactivate your account. It will no longer be deleted. Are you sure that's what you want to do?</p>
+
+<form class="wide" action="." method="post">
+  {% csrf_token %}
+  <p class="submit">
+      <input type="submit" class="btn btn-danger" value="Reactivate account">
+      <a href="{% url 'Core:AccountSettings' %}" class="btn btn-default" role="button">Cancel</a>
+  </p>
+</form>
+
+{% endblock %}

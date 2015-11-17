@@ -1,0 +1,17 @@
+{% extends 'core/upgrade.html' %}{% load zebra_tags %}
+
+{% block title %}Upgrade | {% endblock %}
+{% block page %}default-page stripe-form{% endblock %}
+
+{% block content-heading %}
+<h2>Upgrade</h2>
+{% endblock %}
+
+{% block content-inner %}
+<strong>{% if user.is_premium %}Premium{% else %}Free{% endif %} member</strong> <br />
+<span class="pull-right">Not you? <a href="{% url 'Core:logout' %}">Logout</a></span>
+{{ user.username }} - {{ user.email }}
+<hr />
+
+<p class="lead">Your account was successfully upgraded. Thank you for your support!</p>
+{% endblock %}

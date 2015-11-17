@@ -1,0 +1,593 @@
+---
+layout: default
+title: Index
+slug: index
+---
+
+<section class="content" ng-app="characterEditor">
+    <div ng-controller="CharacterController as ctrl">
+        <header class="site-head">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>{[{c.player}]} / {[{c.name}]}</h2>
+                    </div>
+                    <div class="col-xs">
+                        <ul class="nav nav-pills">
+                            <li><a href="#">All Characters</a>
+                            </li>
+                            <li><a href="#">My Characters</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="pull-right">
+                                    <a data-toggle="collapse" href="#chardetailsbody" aria-expanded="false" aria-controls="chardetailsbody">
+                                        <i class="fa fa-caret-square-o-down"></i>
+                                    </a>
+                                </div>
+                                <h3 class="panel-title">Character Details</h3>
+                            </div>
+                            <div id="chardetailsbody" class="list-group">
+                                <div class="list-group-item form-horizontal">
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-xs-3 control-label">Name</label>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.name">
+                                        </div>
+                                        <div class="col-xs-3"><b>Level</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c.level">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Alignment</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.alignment">
+                                        </div>
+                                        <div class="col-xs-3"><b>Class</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.char_class">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Deity</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.diety">
+                                        </div>
+                                        <div class="col-xs-3"><b>Homeland</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.homeland">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Race</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.race">
+                                        </div>
+                                        <div class="col-xs-3"><b>Size</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <select class="form-control input-sm" ng-model="c.size" ng-change="updateSize(c.size)">
+                                                <option ng-repeat="size in size_options">{[{size}]}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Gender</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <select class="form-control input-sm" ng-model="c.gender">
+                                                <option ng-repeat="opt in genders">{[{opt}]}</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-3"><b>Age</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c.age">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Height</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.height">
+                                        </div>
+                                        <div class="col-xs-3"><b>Weight</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.weight">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Hair</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.hair">
+                                        </div>
+                                        <div class="col-xs-3"><b>Eyes</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" ng-model="c.eyes">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Experience Points</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c.xp">
+                                        </div>
+                                        <div class="col-xs-3"><b>Next Level</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c.next_level">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Abilities</h3>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Ability</b>
+                                        </div>
+                                        <div class="col-xs-3"><b>Score</b>
+                                        </div>
+                                        <div class="col-xs-3"><b>Temp. Adjustment</b>
+                                        </div>
+                                        <div class="col-xs-3"><b>Mod</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item" ng-repeat="abil in abils">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>{[{abil | uppercase}]}</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c[abil].score" ng-change="updateAbil(abil, c[abil])" required>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c[abil].temp" ng-change="updateAbil(abil, c[abil])" required>
+                                        </div>
+                                        <div class="col-xs-3">{[{c[abil].mod}]}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Saving Throws</h3>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-2"></div>
+                                        <div class="col-xs-1"><b>Total</b>
+                                        </div>
+                                        <div class="col-xs-2"><b>Base</b>
+                                        </div>
+                                        <div class="col-xs-1"><b>Mod</b>
+                                        </div>
+                                        <div class="col-xs-2"><b>Magic Mod</b>
+                                        </div>
+                                        <div class="col-xs-2"><b>Misc Mod</b>
+                                        </div>
+                                        <div class="col-xs-2"><b>Temp Mod</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-2"><b>Fortitude (CON):</b>
+                                        </div>
+                                        <div class="col-xs-1">{[{c.fort.total}]} =</div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.fort.base" ng-change="updateSaves()" required>
+                                        </div>
+                                        <div class="col-xs-1">{[{c.con.mod}]}</div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.fort.magic" ng-change="updateSaves()" required>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.fort.misc" ng-change="updateSaves()" required>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.fort.temp" ng-change="updateSaves()" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-2"><b>Reflex (DEX):</b>
+                                        </div>
+                                        <div class="col-xs-1">{[{c.reflex.total}]} =</div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.reflex.base" ng-change="updateSaves()" required>
+                                        </div>
+                                        <div class="col-xs-1">{[{c.dex.mod}]}</div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.reflex.magic" ng-change="updateSaves()" required>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.reflex.misc" ng-change="updateSaves()" required>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.reflex.temp" ng-change="updateSaves()" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-2"><b>Will (WIS):</b>
+                                        </div>
+                                        <div class="col-xs-1">{[{c.will.total}]} =</div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.will.base" ng-change="updateSaves()" required>
+                                        </div>
+                                        <div class="col-xs-1">{[{c.wis.mod}]}</div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.will.magic" ng-change="updateSaves()" required>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.will.misc" ng-change="updateSaves()" required>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="c.will.temp" ng-change="updateSaves()" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Combat Maneuvers</h3>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6"><b>Base Attack Bonus</b></div>
+                                        <div class="col-xs-6"><input class="form-control" type="number" ng-model="c.base_attack" ng-change="updateBAB()"></div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-2"></div>
+                                        <div class="col-xs-1"><small><b>Total</b></small></div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-1"><small><b>BAB</b></small></div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-1"><small><b>Modifier</b></small></div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-1"><small><b>Size</b></small></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2"><b>CMB</b></div>
+                                        <div class="col-xs-1">{[{c.cmb}]}</div>
+                                        <div class="col-xs-1">=</div>
+                                        <div class="col-xs-1">{[{c.base_attack}]}</div>
+                                        <div class="col-xs-1">+</div>
+                                        <div class="col-xs-1">{[{c.cmb_mod}]}</div>
+                                        <div class="col-xs-1">+</div>
+                                        <div class="col-xs-1">{[{-c.size_mod}]}</div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-2"></div>
+                                        <div class="col-xs-1"><small><b>Total</b></small></div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-1"><small><b>BAB</b></small></div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-1"><small><b>Str</b></small></div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-1"><small><b>Dex</b></small></div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-1"><small><b>Size</b></small></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2"><b>CMD</b></div>
+                                        <div class="col-xs-1">{[{c.cmd}]}</div>
+                                        <div class="col-xs-1">=</div>
+                                        <div class="col-xs-1">{[{c.base_attack}]}</div>
+                                        <div class="col-xs-1">+</div>
+                                        <div class="col-xs-1">{[{c.str.mod}]}</div>
+                                        <div class="col-xs-1">+</div>
+                                        <div class="col-xs-1">{[{c.dex.mod}]}</div>
+                                        <div class="col-xs-1">+</div>
+                                        <div class="col-xs-1">{[{-c.size_mod}]}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Attacks (Weapons)</h3>
+                            </div>
+                            <ul class="list-group">
+                            </ul>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Speed</h3>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Base</b></div>
+                                        <div class="col-xs-3">
+                                            <div class="input-group">
+                                                <input class="form-control" type="number" ng-model="c.speeds.base">
+                                                <div class="input-group-addon">ft.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3"><b>With Armor</b></div>
+                                        <div class="col-xs-3">
+                                            <div class="input-group">
+                                                <input class="form-control" type="number" ng-model="c.speeds.armor">
+                                                <div class="input-group-addon">ft.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Fly</b></div>
+                                        <div class="col-xs-3">
+                                            <div class="input-group">
+                                                <input class="form-control" type="number" ng-model="c.speeds.fly">
+                                                <div class="input-group-addon">ft.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3"><b>Swim</b></div>
+                                        <div class="col-xs-3">
+                                            <div class="input-group">
+                                                <input class="form-control" type="number" ng-model="c.speeds.swim">
+                                                <div class="input-group-addon">ft.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Climb</b></div>
+                                        <div class="col-xs-3">
+                                            <div class="input-group">
+                                                <input class="form-control" type="number" ng-model="c.speeds.climb">
+                                                <div class="input-group-addon">ft.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3"><b>Burrow</b></div>
+                                        <div class="col-xs-3">
+                                            <div class="input-group">
+                                                <input class="form-control" type="number" ng-model="c.speeds.burrow">
+                                                <div class="input-group-addon">ft.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">HP <small>Hit Points</small></h3>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Current HP</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c.current_hp">
+                                        </div>
+                                        <div class="col-xs-3"><b>Total HP</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c.hp">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Damage Reduction</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c.dr">
+                                        </div>
+                                        <div class="col-xs-3"><b>Spell Resistance</b>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input class="form-control input-sm" type="number" ng-model="c.spell_resist">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Initiative</h3>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Total</b>
+                                        </div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-3"><b>Dex Mod</b>
+                                        </div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-4"><b>Misc Mod</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-3">{[{c.dex.mod + c.init_mod}]}</div>
+                                        <div class="col-xs-1">=</div>
+                                        <div class="col-xs-3">{[{c.dex.mod}]}</div>
+                                        <div class="col-xs-1">+</div>
+                                        <div class="col-xs-4">
+                                            <input class="form-control input-sm" type="number" ng-model="c.init_mod">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">AC <small>Armor Class</small></h3>
+                            </div>
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-4"><b>AC: </b>{[{c.ac.total}]}
+                                        </div>
+                                        <div class="col-xs-4"><b>Touch: </b>{[{c.ac.touch}]}
+                                        </div>
+                                        <div class="col-xs-4"><b>Flat-footed: </b>{[{c.ac.flat}]}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-2"><small><b>Armor Bonus</b></small></div>
+                                        <div class="col-xs-2"><small><b>Shield Bonus</b></small></div>
+                                        <div class="col-xs-1"><small><b>Dex</b></small></div>
+                                        <div class="col-xs-1"><small><b>Size</b></small></div>
+                                        <div class="col-xs-2"><small><b>Natural Armor</b></small></div>
+                                        <div class="col-xs-2"><small><b>Deflection Mod</b></small></div>
+                                        <div class="col-xs-2"><small><b>Misc Mod</b></small></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-2"><input class="form-control input-sm" type="number" ng-model="c.ac.armor" ng-change="updateAC()"></div>
+                                        <div class="col-xs-2"><input class="form-control input-sm" type="number" ng-model="c.ac.shield" ng-change="updateAC()"></div>
+                                        <div class="col-xs-1">{[{c.dex.mod}]}</div>
+                                        <div class="col-xs-1">{[{c.size_mod}]}</div>
+                                        <div class="col-xs-2"><input class="form-control input-sm" type="number" ng-model="c.ac.nat" ng-change="updateAC()"></div>
+                                        <div class="col-xs-2"><input class="form-control input-sm" type="number" ng-model="c.ac.deflect" ng-change="updateAC()"></div>
+                                        <div class="col-xs-2"><input class="form-control input-sm" type="number" ng-model="c.ac.misc" ng-change="updateAC()"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Skills</h3>
+                            </div>
+                            <div class="list-group">
+
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-3"><b>Skill Name</b>
+                                        </div>
+                                        <div class="col-xs-1"><b>Total</b>
+                                        </div>
+                                        <div class="col-xs-2"><b>Mod</b>
+                                        </div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-2"><b>Ranks</b>
+                                        </div>
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-2"><b>Misc</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item form-horizontal" ng-repeat="skill in c.skills">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" ng-checked="skill.c_skill" ng-model="skill.c_skill" ng-change="updateSkills()"> <small>{[{skill.name | uppercase}]}</small>
+                                                    </br>
+                                                    <input class="form-control" ng-model="skill.extra" ng-show="skill.extra">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-1">{[{skill.total }]}</div>
+                                        <div class="col-xs-2">= <small>{[{skill.abil | uppercase}]}</small> {[{skill.abil_mod}]}</div>
+                                        <div class="col-xs-1">+</div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="skill.ranks" ng-change="updateSkills()" required>
+                                        </div>
+                                        <div class="col-xs-1">+</div>
+                                        <div class="col-xs-2">
+                                            <input class="form-control input-sm" type="number" ng-model="skill.misc" ng-change="updateSkills()" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Misc</h3>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Created on: {[{c.meta.created | date:"short"}]}</li>
+                                <li class="list-group-item">Last Updated: {[{c.meta.updated | date:"short"}]}</li>
+                                <li class="list-group-item">Game: {[{c.meta.type}]}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <ul id="bottom-nav" class="list-inline">
+            <li><a href="/about/">About</a></li>
+            <li><a href="/tour/">Tour</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+        <small id="copyright">Copyright &copy; CriticalCodex 2015 — All content &copy; their respective owners.<br />
+            By using this site you are agreeing to the <a href="/terms/">Terms of Use</a> and <a href="/privacy/">Privacy Policy</a>.</small>
+        </div>
+    </footer>

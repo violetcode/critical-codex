@@ -1,0 +1,2714 @@
+[
+	{
+		"pk": 1,
+		"fields": {
+			"name": "Acrobatic",
+			"description": "+2 bonus on Acrobatics and Fly checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 2,
+		"fields": {
+			"name": "Additional Traits",
+			"description": "Gain two additional character traits"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 3,
+		"fields": {
+			"name": "Agile Maneuvers",
+			"description": "Use your Dex bonus when calculating your CMB"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 4,
+		"fields": {
+			"name": "Under and Over",
+			"description": "Failed grapples against you cause attacker to fall prone"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 5,
+		"fields": {
+			"name": "Alertness",
+			"description": "+2 bonus on Perception and Sense Motive checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 6,
+		"fields": {
+			"name": "Alignment Channel",
+			"description": "Channel energy can heal or harm outsiders"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 7,
+		"fields": {
+			"name": "Animal Affinity",
+			"description": "+2 bonus on Handle Animal and Ride checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 8,
+		"fields": {
+			"name": "Arcane Armor Training",
+			"description": "Reduce your arcane spell failure chance by 10%"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 9,
+		"fields": {
+			"name": "Arcane Armor Mastery",
+			"description": "Reduce your arcane spell failure chance by 20%"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 10,
+		"fields": {
+			"name": "Arcane Blast",
+			"description": "Sacrifice a spell to make ray attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 11,
+		"fields": {
+			"name": "Arcane Shield",
+			"description": "Sacrifice a spell to gain deflection bonus to AC"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 12,
+		"fields": {
+			"name": "Arcane Strike",
+			"description": "+1 damage and weapons are considered magic"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 13,
+		"fields": {
+			"name": "Arcane Talent",
+			"description": "Cast a 0-level spell 3 times per day as a spell-like ability"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 14,
+		"fields": {
+			"name": "Armor Proficiency, Light",
+			"description": "No penalties on attack rolls while wearing light armor"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 15,
+		"fields": {
+			"name": "Armor Proficiency, Medium",
+			"description": "No penalties on attack rolls while wearing medium armor"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 16,
+		"fields": {
+			"name": "Armor Proficiency, Heavy",
+			"description": "No penalties on attack rolls while wearing heavy armor"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 17,
+		"fields": {
+			"name": "Aspect of the Beast",
+			"description": "Gain one of four bestial advantages"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 18,
+		"fields": {
+			"name": "Athletic",
+			"description": "+2 bonus on Climb and Swim checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 19,
+		"fields": {
+			"name": "Augment Summoning",
+			"description": "Summoned creatures gain +4 Str and Con"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 20,
+		"fields": {
+			"name": "Blind-Fight",
+			"description": "Reroll miss chances for concealment"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 21,
+		"fields": {
+			"name": "Improved Blind-Fight",
+			"description": "Ignore miss chance for less than total concealment"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 22,
+		"fields": {
+			"name": "Greater Blind-Fight",
+			"description": "Total concealment is considered normal concealment"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 23,
+		"fields": {
+			"name": "Breadth of Experience",
+			"description": "+2 bonus on all Knowledge and Profession checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 24,
+		"fields": {
+			"name": "Catch Off-Guard",
+			"description": "No penalties for improvised melee weapons"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 25,
+		"fields": {
+			"name": "Channel Smite",
+			"description": "Channel energy through your attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 26,
+		"fields": {
+			"name": "Childlike",
+			"description": "+2 on Disguise checks to look like human child, take 10 on Bluff checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 27,
+		"fields": {
+			"name": "Combat Casting",
+			"description": "+4 bonus on concentration checks for defensive casting"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 28,
+		"fields": {
+			"name": "Combat Expertise",
+			"description": "Trade attack bonus for AC bonus"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 29,
+		"fields": {
+			"name": "Gang Up",
+			"description": "Flank an opponent if at least two allies are adjacent to it"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 30,
+		"fields": {
+			"name": "Team Up",
+			"description": "Aid another as a move action with two adjacent allies"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 31,
+		"fields": {
+			"name": "Improved Dirty Trick",
+			"description": "+2 bonus on dirty trick attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 32,
+		"fields": {
+			"name": "Greater Dirty Trick",
+			"description": "Dirty trick penalty lasts 1d4 rounds"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 33,
+		"fields": {
+			"name": "Improved Disarm",
+			"description": "+2 bonus on disarm attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 34,
+		"fields": {
+			"name": "Disarming Strike",
+			"description": "Attempt a disarm on a successful critical hit"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 35,
+		"fields": {
+			"name": "Greater Disarm",
+			"description": "Disarmed weapons are knocked away from your enemy"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 36,
+		"fields": {
+			"name": "Improved Feint",
+			"description": "Feint as a move action"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 37,
+		"fields": {
+			"name": "Greater Feint",
+			"description": "Enemies you feint lose their Dex bonus for 1 round"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 38,
+		"fields": {
+			"name": "Improved Reposition",
+			"description": "+2 bonus on reposition attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 39,
+		"fields": {
+			"name": "Greater Reposition",
+			"description": "Enemies you reposition provoke attacks of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 40,
+		"fields": {
+			"name": "Improved Steal",
+			"description": "+2 bonus on steal attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 41,
+		"fields": {
+			"name": "Greater Steal",
+			"description": "Enemies don\u2019t notice theft until after combat"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 42,
+		"fields": {
+			"name": "Improved Trip",
+			"description": "+2 bonus on trip attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 43,
+		"fields": {
+			"name": "Greater Trip",
+			"description": "Enemies you trip provoke attacks of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 44,
+		"fields": {
+			"name": "Repositioning Strike",
+			"description": "Attempt a reposition attack on a successful critical hit"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 45,
+		"fields": {
+			"name": "Tripping Strike",
+			"description": "Attempt a trip attack on a successful critical hit"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 46,
+		"fields": {
+			"name": "Second Chance",
+			"description": "Exchange later attacks to reroll missed first attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 47,
+		"fields": {
+			"name": "Improved Second Chance",
+			"description": "Take a \u20135 penalty on later attacks to reroll missed attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 48,
+		"fields": {
+			"name": "Swift Aid",
+			"description": "Attempt to aid another as a swift action"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 49,
+		"fields": {
+			"name": "Whirlwind Attack",
+			"description": "Make one melee attack against all foes within reach"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 50,
+		"fields": {
+			"name": "Combat Reflexes",
+			"description": "Make additional attacks of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 51,
+		"fields": {
+			"name": "Bodyguard",
+			"description": "Use attack of opportunity to add a bonus to adjacent ally\u2019s AC"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 52,
+		"fields": {
+			"name": "In Harm\u2019s Way",
+			"description": "Take the damage of a successful attack upon an adjacent ally"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 53,
+		"fields": {
+			"name": "Combat Patrol",
+			"description": "Increase threatened area for attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 54,
+		"fields": {
+			"name": "Stand Still",
+			"description": "Stop enemies from moving past you"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 55,
+		"fields": {
+			"name": "Teleport Tactician",
+			"description": "Teleporting creatures provoke attacks of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 56,
+		"fields": {
+			"name": "Command Undead",
+			"description": "Channel energy can be used to control undead"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 57,
+		"fields": {
+			"name": "Cooperative Crafting",
+			"description": "+2 bonus on Craft or Spellcraft checks while working together"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 58,
+		"fields": {
+			"name": "Cosmopolitan",
+			"description": "Read and speak two additional languages"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 59,
+		"fields": {
+			"name": "Critical Focus",
+			"description": "+4 bonus on attack rolls made to confirm critical hits"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 60,
+		"fields": {
+			"name": "Bleeding Critical",
+			"description": "Whenever you score a critical hit, the target takes 2d6 bleed"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 61,
+		"fields": {
+			"name": "Blinding Critical",
+			"description": "Whenever you score a critical hit, the target is blinded"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 62,
+		"fields": {
+			"name": "Crippling Critical",
+			"description": "Whenever you score a critical hit, the target\u2019s speed is halved"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 63,
+		"fields": {
+			"name": "Critical Mastery",
+			"description": "Apply two effects to your critical hits"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 64,
+		"fields": {
+			"name": "Deafening Critical",
+			"description": "Whenever you score a critical hit, the target is deafened"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 65,
+		"fields": {
+			"name": "Sickening Critical",
+			"description": "Whenever you score a critical hit, the target is sickened"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 66,
+		"fields": {
+			"name": "Staggering Critical",
+			"description": "Whenever you score a critical hit, the target is staggered"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 67,
+		"fields": {
+			"name": "Stunning Critical",
+			"description": "Whenever you score a critical hit, the target is stunned"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 68,
+		"fields": {
+			"name": "Tiring Critical",
+			"description": "Whenever you score a critical hit, the target is fatigued"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 69,
+		"fields": {
+			"name": "Exhausting Critical",
+			"description": "Whenever you score a critical hit, the target is exhausted"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 70,
+		"fields": {
+			"name": "Dastardly Finish",
+			"description": "Deliver coup de grace to cowering or stunned target"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 71,
+		"fields": {
+			"name": "Deadly Aim",
+			"description": "Trade ranged attack bonus for damage"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 72,
+		"fields": {
+			"name": "Deceitful",
+			"description": "+2 bonus on Bluff and Disguise checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 73,
+		"fields": {
+			"name": "Deep Drinker",
+			"description": "Gain 2 temporary ki from drunken ki"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 74,
+		"fields": {
+			"name": "Deepsight",
+			"description": "Your darkvision has a range of 120 feet"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 75,
+		"fields": {
+			"name": "Defensive Combat Training",
+			"description": "Use your total Hit Dice as your base attack bonus for CMD"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 76,
+		"fields": {
+			"name": "Deft Hands",
+			"description": "+2 bonus on Disable Device and Sleight of Hand checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 77,
+		"fields": {
+			"name": "Disruptive",
+			"description": "Increases the DC to cast spells adjacent to you"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 78,
+		"fields": {
+			"name": "Spellbreaker",
+			"description": "Enemies provoke attacks if their spells fail"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 79,
+		"fields": {
+			"name": "Diviner\u2019s Delving",
+			"description": "+2 bonus on caster level checks with divinations"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 80,
+		"fields": {
+			"name": "Dodge",
+			"description": "+1 dodge bonus to AC"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 81,
+		"fields": {
+			"name": "Mobility",
+			"description": "+4 AC against attacks of opportunity from movement"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 82,
+		"fields": {
+			"name": "Sidestep",
+			"description": "Make 5-foot step immediately after an opponent misses"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 83,
+		"fields": {
+			"name": "Improved Sidestep",
+			"description": "Sidestep without using your 5-foot step on your next turn"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 84,
+		"fields": {
+			"name": "Spring Attack",
+			"description": "Move before and after melee attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 85,
+		"fields": {
+			"name": "Underfoot",
+			"description": "+4 on Acrobatics checks to move past larger opponents"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 86,
+		"fields": {
+			"name": "Wind Stance",
+			"description": "Gain 20% concealment if you move"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 87,
+		"fields": {
+			"name": "Lightning Stance",
+			"description": "Gain 50% concealment if you move"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 88,
+		"fields": {
+			"name": "Eagle Eyes",
+			"description": "Ignore up to \u20135 due to distance on visual Perception checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 89,
+		"fields": {
+			"name": "Eclectic",
+			"description": "Gain an additional favored class"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 90,
+		"fields": {
+			"name": "Eldritch Claws",
+			"description": "Natural weapons treated as magic and silver"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 91,
+		"fields": {
+			"name": "Elemental Channel",
+			"description": "Channel energy can harm or heal elementals"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 92,
+		"fields": {
+			"name": "Elemental Focus",
+			"description": "+1 bonus on save DCs for one energy type"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 93,
+		"fields": {
+			"name": "Greater Elemental Focus",
+			"description": "+1 bonus on save DCs for one energy type"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 94,
+		"fields": {
+			"name": "Elven Accuracy",
+			"description": "Reroll miss chance due to concealment when using a bow"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 95,
+		"fields": {
+			"name": "Endurance",
+			"description": "+4 bonus on checks to avoid nonlethal damage"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 96,
+		"fields": {
+			"name": "Diehard",
+			"description": "Automatically stabilize and remain conscious below 0 hp"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 97,
+		"fields": {
+			"name": "Fast Healer",
+			"description": "Regain additional hit points when healing"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 98,
+		"fields": {
+			"name": "Heroic Defiance",
+			"description": "Once per day, delay onset of harmful condition for 1 round"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 99,
+		"fields": {
+			"name": "Heroic Recovery",
+			"description": "Once per day, gain new saving throw against harmful condition requiring Fort save"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 100,
+		"fields": {
+			"name": "Enforcer",
+			"description": "Demoralize opponent as free action when you inflict nonlethal damage"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 101,
+		"fields": {
+			"name": "Eschew Materials",
+			"description": "Cast spells without material components"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 102,
+		"fields": {
+			"name": "Exotic Weapon Proficiency",
+			"description": "No penalty on attacks made with one exotic weapon"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 103,
+		"fields": {
+			"name": "Expanded Arcana",
+			"description": "Add one or two spells to list of spells known"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 104,
+		"fields": {
+			"name": "Extra Bombs",
+			"description": "Throw two additional bombs per day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 105,
+		"fields": {
+			"name": "Extra Channel",
+			"description": "Channel energy two additional times per day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 106,
+		"fields": {
+			"name": "Extra Discovery",
+			"description": "Gain one additional discovery"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 107,
+		"fields": {
+			"name": "Extra Hex",
+			"description": "Gain one additional hex"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 108,
+		"fields": {
+			"name": "Extra Ki",
+			"description": "Increase your ki pool by 2 points"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 109,
+		"fields": {
+			"name": "Extra Lay On Hands",
+			"description": "Use lay on hands two additional times per day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 110,
+		"fields": {
+			"name": "Extra Mercy",
+			"description": "Your lay on hands benefits from one additional mercy"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 111,
+		"fields": {
+			"name": "Extra Performance",
+			"description": "Use bardic performance for 6 additional rounds per day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 112,
+		"fields": {
+			"name": "Extra Rage",
+			"description": "Use rage for 6 additional rounds per day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 113,
+		"fields": {
+			"name": "Extra Rage Power",
+			"description": "Gain one additional rage power"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 114,
+		"fields": {
+			"name": "Extra Revelation",
+			"description": "Gain one additional revelation"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 115,
+		"fields": {
+			"name": "Extra Rogue Talent",
+			"description": "Gain one additional rogue talent"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 116,
+		"fields": {
+			"name": "Fast Drinker",
+			"description": "Drink as a swift action"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 117,
+		"fields": {
+			"name": "Favored Defense",
+			"description": "Bonus to CMD and AC when attacked by favored enemy"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 118,
+		"fields": {
+			"name": "Fight On",
+			"description": "Gain temporary hit points when reduced to 0"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 119,
+		"fields": {
+			"name": "Fleet",
+			"description": "Your base speed increases by 5 feet"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 120,
+		"fields": {
+			"name": "Gnome Trickster",
+			"description": "Use mage hand and prestidigitation once per day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 121,
+		"fields": {
+			"name": "Go Unnoticed",
+			"description": "Make Stealth check against flat-footed opponents during first round of combat"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 122,
+		"fields": {
+			"name": "Great Fortitude",
+			"description": "+2 on Fortitude saves"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 123,
+		"fields": {
+			"name": "Improved Great Fortitude",
+			"description": "Once per day, you may reroll a Fortitude save"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 124,
+		"fields": {
+			"name": "Groundling",
+			"description": "Speak with burrowing animals as spell-like ability"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 125,
+		"fields": {
+			"name": "Improved Channel",
+			"description": "+2 bonus on channel energy DC"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 126,
+		"fields": {
+			"name": "Improved Counterspell",
+			"description": "Counterspell with spell of the same school"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 127,
+		"fields": {
+			"name": "Parry Spell",
+			"description": "Reflect a counterspelled spell back on its caster"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 128,
+		"fields": {
+			"name": "Improved Critical",
+			"description": "Double the threat range of one weapon"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 129,
+		"fields": {
+			"name": "Improved Familiar",
+			"description": "Gain a more powerful familiar"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 130,
+		"fields": {
+			"name": "Improved Initiative",
+			"description": "+4 bonus on initiative checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 131,
+		"fields": {
+			"name": "Improved Share Spells",
+			"description": "Spells affect both you and your bonded creature"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 132,
+		"fields": {
+			"name": "Improved Stonecunning",
+			"description": "+4 bonus on Perception checks to notice unusual stonework"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 133,
+		"fields": {
+			"name": "Stone Sense",
+			"description": "Gain tremorsense 10 ft."
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 134,
+		"fields": {
+			"name": "Improved Unarmed Strike",
+			"description": "Always considered armed"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 135,
+		"fields": {
+			"name": "Deflect Arrows",
+			"description": "Avoid one ranged attack per round"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 136,
+		"fields": {
+			"name": "Snatch Arrows",
+			"description": "Catch one ranged attack per round"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 137,
+		"fields": {
+			"name": "Elemental Fist",
+			"description": "Deal 1d6 energy damage with an unarmed strike"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 138,
+		"fields": {
+			"name": "Improved Grapple",
+			"description": "+2 bonus on grapple attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 139,
+		"fields": {
+			"name": "Greater Grapple",
+			"description": "Maintain your grapple as a move action"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 140,
+		"fields": {
+			"name": "Ki Throw",
+			"description": "Throw opponent into adjacent square with a trip attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 141,
+		"fields": {
+			"name": "Improved Ki Throw",
+			"description": "Throw opponent into occupied square as a bull rush"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 142,
+		"fields": {
+			"name": "Perfect Strike",
+			"description": "Roll twice for unarmed strikes and take the better roll"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 143,
+		"fields": {
+			"name": "Punishing Kick",
+			"description": "Knock down or push back foes with unarmed strikes"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 144,
+		"fields": {
+			"name": "Scorpion Style",
+			"description": "Reduce target's speed to 5 ft."
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 145,
+		"fields": {
+			"name": "Gorgon's Fist",
+			"description": "Stagger a foe whose speed is reduced"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 146,
+		"fields": {
+			"name": "Medusa's Wrath",
+			"description": "Make 2 extra attacks against a hindered foe"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 147,
+		"fields": {
+			"name": "Cockatrice Strike",
+			"description": "Turn a target to stone with a critical hit"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 148,
+		"fields": {
+			"name": "Stunning Fist",
+			"description": "Stun opponent with an unarmed strike"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 149,
+		"fields": {
+			"name": "Touch of Serenity",
+			"description": "Foes hit by unarmed strikes cannot attack or cast spells"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 150,
+		"fields": {
+			"name": "Improvised Weapon Mastery",
+			"description": "Make an improvised weapon deadly"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 151,
+		"fields": {
+			"name": "Intimidating Prowess",
+			"description": "Add Str to Intimidate in addition to Cha"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 152,
+		"fields": {
+			"name": "Iron Will",
+			"description": "+2 bonus on Will saves"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 153,
+		"fields": {
+			"name": "Improved Iron Will",
+			"description": "Once per day, you may reroll a Will save"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 154,
+		"fields": {
+			"name": "Ironguts",
+			"description": "+2 on saves against nausea, sickening, and ingested poisons"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 155,
+		"fields": {
+			"name": "Ironhide",
+			"description": "+1 natural armor bonus to AC"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 156,
+		"fields": {
+			"name": "Keen Scent",
+			"description": "Gain the scent special ability"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 157,
+		"fields": {
+			"name": "Smell Fear",
+			"description": "+4 on Perception checks to detect frightened creatures"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 158,
+		"fields": {
+			"name": "Leadership",
+			"description": "Gain a cohort and followers"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 159,
+		"fields": {
+			"name": "Leaf Singer",
+			"description": "Gain benefits to bardic performance in forests and against fey"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 160,
+		"fields": {
+			"name": "Lightning Reflexes",
+			"description": "+2 bonus on Reflex saves"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 161,
+		"fields": {
+			"name": "Improved Lightning Reflexes",
+			"description": "Once per day, you may reroll a Reflex save"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 162,
+		"fields": {
+			"name": "Lingering Performance",
+			"description": "Bardic performance continues for 2 rounds after you stop performing"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 163,
+		"fields": {
+			"name": "Low Profile",
+			"description": "+1 dodge bonus to AC against ranged attacks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 164,
+		"fields": {
+			"name": "Lucky Halfling",
+			"description": "You may roll saving throw for an ally once per day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 165,
+		"fields": {
+			"name": "Lunge",
+			"description": "Take a \u20132 penalty to your AC to attack with reach"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 166,
+		"fields": {
+			"name": "Magical Aptitude",
+			"description": "+2 bonus on Spellcraft and Use Magic Device checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 167,
+		"fields": {
+			"name": "Martial Weapon Proficiency",
+			"description": "No penalty on attacks made with one martial weapon"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 168,
+		"fields": {
+			"name": "Master Alchemist",
+			"description": "+2 on Craft (alchemy) checks, and you can create alchemical items and poisons faster"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 169,
+		"fields": {
+			"name": "Master Craftsman",
+			"description": "You can craft magic items without being a spellcaster"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 170,
+		"fields": {
+			"name": "Minor Spell Expertise",
+			"description": "Cast 1st-level spell as spell-like ability 2/day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 171,
+		"fields": {
+			"name": "Major Spell Expertise",
+			"description": "Cast 5th-level or lower spell as spell-like ability 2/day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 172,
+		"fields": {
+			"name": "Mounted Combat",
+			"description": "Avoid attacks on mount with Ride check"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 173,
+		"fields": {
+			"name": "Mounted Archery",
+			"description": "Halve the penalty for ranged attacks while mounted"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 174,
+		"fields": {
+			"name": "Mounted Shield",
+			"description": "Apply shield bonus to mount\u2019s AC"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 175,
+		"fields": {
+			"name": "Ride-By Attack",
+			"description": "Move before and after a charge attack while mounted"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 176,
+		"fields": {
+			"name": "Spirited Charge",
+			"description": "Double damage on a mounted charge"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 177,
+		"fields": {
+			"name": "Trample",
+			"description": "Overrun targets while mounted"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 178,
+		"fields": {
+			"name": "Trick Riding",
+			"description": "Automatically pass simple Ride skill checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 179,
+		"fields": {
+			"name": "Mounted Skirmisher",
+			"description": "Make a full attack if mount moves its speed or less"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 180,
+		"fields": {
+			"name": "Unseat",
+			"description": "Knock opponents from their mounts"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 181,
+		"fields": {
+			"name": "Natural Spell",
+			"description": "Cast spells while using wild shape"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 182,
+		"fields": {
+			"name": "Nimble Moves",
+			"description": "Ignore 5 feet of difficult terrain when you move"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 183,
+		"fields": {
+			"name": "Acrobatic Steps",
+			"description": "Ignore 20 feet of difficult terrain when you move"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 184,
+		"fields": {
+			"name": "Light Step",
+			"description": "Move normal speed in difficult terrain"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 185,
+		"fields": {
+			"name": "Pass for Human",
+			"description": "+10 on Disguise checks to look like a human"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 186,
+		"fields": {
+			"name": "Persuasive",
+			"description": "+2 bonus on Diplomacy and Intimidate checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 187,
+		"fields": {
+			"name": "Point-Blank Shot",
+			"description": "+1 attack and damage on targets within 30 feet"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 188,
+		"fields": {
+			"name": "Disrupting Shot",
+			"description": "Ranged attacks increase enemy\u2019s DC to cast spells"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 189,
+		"fields": {
+			"name": "Far Shot",
+			"description": "Decrease ranged penalties by half"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 190,
+		"fields": {
+			"name": "Precise Shot",
+			"description": "No penalty for shooting into melee"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 191,
+		"fields": {
+			"name": "Focused Shot",
+			"description": "Add Int modifier on damage rolls with bows or crossbows"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 192,
+		"fields": {
+			"name": "Improved Precise Shot",
+			"description": "No cover or concealment chance on ranged attacks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 193,
+		"fields": {
+			"name": "Pinpoint Targeting",
+			"description": "No armor or shield bonus on one ranged attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 194,
+		"fields": {
+			"name": "Shot on the Run",
+			"description": "Make ranged attack at any point during movement"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 195,
+		"fields": {
+			"name": "Parting Shot",
+			"description": "Make a ranged attack when withdrawing"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 196,
+		"fields": {
+			"name": "Rapid Shot",
+			"description": "Make one extra ranged attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 197,
+		"fields": {
+			"name": "Crossbow Mastery",
+			"description": "Reload crossbow as free action and make full attacks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 198,
+		"fields": {
+			"name": "Manyshot",
+			"description": "Shoot two arrows simultaneously"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 199,
+		"fields": {
+			"name": "Stabbing Shot",
+			"description": "Use arrow as a melee attack to push enemies back"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 200,
+		"fields": {
+			"name": "Power Attack",
+			"description": "Trade melee attack bonus for damage"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 201,
+		"fields": {
+			"name": "Bloody Assault",
+			"description": "Trade melee attack bonus for bleed damage"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 202,
+		"fields": {
+			"name": "Cleave",
+			"description": "Make an additional attack if the first one hits"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 203,
+		"fields": {
+			"name": "Great Cleave",
+			"description": "Make an additional attack after each attack hits"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 204,
+		"fields": {
+			"name": "Dazing Assault ",
+			"description": "Trade melee attack bonus to daze opponents"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 205,
+		"fields": {
+			"name": "Furious Focus",
+			"description": "Do not take the Power Attack penalty on the first attack each round"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 206,
+		"fields": {
+			"name": "Dreadful Carnage",
+			"description": "Make a free Intimidate check when you knock down a foe"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 207,
+		"fields": {
+			"name": "Improved Bull Rush",
+			"description": "+2 bonus on bull rush attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 208,
+		"fields": {
+			"name": "Bull Rush Strike",
+			"description": "Attempt a bull rush on a successful critical hit"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 209,
+		"fields": {
+			"name": "Greater Bull Rush",
+			"description": "Enemies you bull rush provoke attacks of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 210,
+		"fields": {
+			"name": "Improved Drag",
+			"description": "+2 bonus on drag attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 211,
+		"fields": {
+			"name": "Greater Drag",
+			"description": "Enemies you drag provoke attacks of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 212,
+		"fields": {
+			"name": "Improved Overrun",
+			"description": "+2 bonus on overrun attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 213,
+		"fields": {
+			"name": "Charge Through",
+			"description": "Make overrun as free action while charging"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 214,
+		"fields": {
+			"name": "Greater Overrun",
+			"description": "Enemies you overrun provoke attacks of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 215,
+		"fields": {
+			"name": "Improved Sunder",
+			"description": "+2 bonus on sunder attempts, no attack of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 216,
+		"fields": {
+			"name": "Greater Sunder",
+			"description": "Damage from sunder attempts transfers to your enemy"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 217,
+		"fields": {
+			"name": "Sundering Strike",
+			"description": "Attempt a sunder attack on a successful critical hit"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 218,
+		"fields": {
+			"name": "Pushing Assault",
+			"description": "Push a foe back with a two-handed weapon"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 219,
+		"fields": {
+			"name": "Shield of Swings",
+			"description": "Reduce damage with a two handed weapon to gain a +4 shield bonus"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 220,
+		"fields": {
+			"name": "Smash",
+			"description": "Ignore 5 points of hardness when breaking an object"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 221,
+		"fields": {
+			"name": "Stunning Assault",
+			"description": "Trade melee attack bonus to stun opponents"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 222,
+		"fields": {
+			"name": "Practiced Tactician",
+			"description": "Use tactician ability one additional time per day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 223,
+		"fields": {
+			"name": "Preferred Spell",
+			"description": "Spontaneously cast a specific spell"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 224,
+		"fields": {
+			"name": "Quick Draw",
+			"description": "Draw weapon as a free action"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 225,
+		"fields": {
+			"name": "Racial Heritage",
+			"description": "Affected as though both human and another race"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 226,
+		"fields": {
+			"name": "Raging Vitality",
+			"description": "+2 bonus to Con when raging, and continue raging if unconscious"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 227,
+		"fields": {
+			"name": "Rapid Reload",
+			"description": "Reload crossbow quickly"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 228,
+		"fields": {
+			"name": "Razortusk",
+			"description": "Gain bite attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 229,
+		"fields": {
+			"name": "Rending Claws",
+			"description": "Deal 1d6 extra damage if both claws hit"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 230,
+		"fields": {
+			"name": "Run",
+			"description": "Run at 5 times your normal speed"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 231,
+		"fields": {
+			"name": "Selective Channeling",
+			"description": "Choose whom to affect with channel energy"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 232,
+		"fields": {
+			"name": "Self-Sufficient",
+			"description": "+2 bonus on Heal and Survival checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 233,
+		"fields": {
+			"name": "Shadow Strike",
+			"description": "Deal precision damage against targets with concealment"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 234,
+		"fields": {
+			"name": "Shared Insight",
+			"description": "Grant friendly creatures a +2 bonus on Perception checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 235,
+		"fields": {
+			"name": "Sharp Senses",
+			"description": "+4 racial bonus on Perception checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 236,
+		"fields": {
+			"name": "Shield Proficiency",
+			"description": "No penalties on attack rolls when using a shield"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 237,
+		"fields": {
+			"name": "Improved Shield Bash",
+			"description": "Keep your shield bonus when shield bashing"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 238,
+		"fields": {
+			"name": "Shield Slam",
+			"description": "Free bull rush with a bash attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 239,
+		"fields": {
+			"name": "Shield Master",
+			"description": "No two-weapon penalties when attacking with a shield"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 240,
+		"fields": {
+			"name": "Bashing Finish",
+			"description": "Make a free shield bash after a critical hit"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 241,
+		"fields": {
+			"name": "Saving Shield",
+			"description": "Grant shield bonus to an adjacent ally"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 242,
+		"fields": {
+			"name": "Shield Focus",
+			"description": "Gain a +1 bonus to your AC when using a shield"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 243,
+		"fields": {
+			"name": "Covering Defense",
+			"description": "Provide cover to an ally with total defense"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 244,
+		"fields": {
+			"name": "Greater Shield Focus",
+			"description": "Gain a +1 bonus to your AC when using a shield"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 245,
+		"fields": {
+			"name": "Missile Shield",
+			"description": "Deflect one ranged attack per round with shield"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 246,
+		"fields": {
+			"name": "Ray Shield",
+			"description": "Deflect one ranged touch attack per round with shield"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 247,
+		"fields": {
+			"name": "Shield Specialization",
+			"description": "+2 bonus to AC against criticals with one type of shield"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 248,
+		"fields": {
+			"name": "Greater Shield Specialization",
+			"description": "+2 bonus to AC against criticals, and negate critical hit once per day"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 249,
+		"fields": {
+			"name": "Tower Shield Proficiency",
+			"description": "No penalties on attack rolls when using a tower shield"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 250,
+		"fields": {
+			"name": "Simple Weapon Proficiency",
+			"description": "No penalty on attacks made with simple weapons"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 251,
+		"fields": {
+			"name": "Skill Focus",
+			"description": "+3 bonus on one skill (+6 at 10 ranks)"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 252,
+		"fields": {
+			"name": "Sociable",
+			"description": "Grant friendly creatures a +2 bonus on Diplomacy checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 253,
+		"fields": {
+			"name": "Spell Focus",
+			"description": "+1 bonus on save DCs for one school"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 254,
+		"fields": {
+			"name": "Greater Spell Focus",
+			"description": "+1 bonus on save DCs for one school"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 255,
+		"fields": {
+			"name": "Spell Mastery",
+			"description": "Prepare some spells without a spellbook"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 256,
+		"fields": {
+			"name": "Spell Penetration",
+			"description": "+2 bonus on level checks to beat spell resistance"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 257,
+		"fields": {
+			"name": "Greater Spell Penetration",
+			"description": "+2 bonus on level checks to beat spell resistance"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 258,
+		"fields": {
+			"name": "Spell Perfection",
+			"description": "Apply any metamagic feat to one spell without penalty, up to 9th level"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 259,
+		"fields": {
+			"name": "Spider Step",
+			"description": "Walk on walls or ceilings for half your slow fall distance"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 260,
+		"fields": {
+			"name": "Cloud Step",
+			"description": "Air walk for half your slow fall distance"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 261,
+		"fields": {
+			"name": "Stealthy",
+			"description": "+2 bonus on Escape Artist and Stealth checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 262,
+		"fields": {
+			"name": "Steel Soul",
+			"description": "+4 racial bonus on saves against spells and spell-like abilities"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 263,
+		"fields": {
+			"name": "Step Up",
+			"description": "Take a 5-foot step as an immediate action"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 264,
+		"fields": {
+			"name": "Following Step",
+			"description": "Move up to 10 feet as an immediate action"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 265,
+		"fields": {
+			"name": "Step Up and Strike",
+			"description": "Follow adjacent creature and attack as an immediate action"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 266,
+		"fields": {
+			"name": "Stone-Faced",
+			"description": "+4 bonus on Bluff checks to lie or conceal motives"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 267,
+		"fields": {
+			"name": "Stone Singer",
+			"description": "Gain benefits to bardic performance underground and against earth creatures"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 268,
+		"fields": {
+			"name": "Strike Back",
+			"description": "Attack foes that strike you while using reach"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 269,
+		"fields": {
+			"name": "Summoner\u2019s Call",
+			"description": "Your eidolon gets a bonus when summoned"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 270,
+		"fields": {
+			"name": "Taunt",
+			"description": "Demoralize opponents with Bluff instead of Intimidate"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 271,
+		"fields": {
+			"name": "Tenacious Transmutation",
+			"description": "+2 to DC to dispel your transmutations"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 272,
+		"fields": {
+			"name": "Throw Anything",
+			"description": "No penalties for improvised ranged weapons"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 273,
+		"fields": {
+			"name": "Toughness",
+			"description": "+3 hit points, +1 per Hit Die beyond 3"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 274,
+		"fields": {
+			"name": "Turn Undead",
+			"description": "Channel energy can be used to make undead flee"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 275,
+		"fields": {
+			"name": "Two-Weapon Fighting",
+			"description": "Reduce two-weapon fighting penalties"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 276,
+		"fields": {
+			"name": "Double Slice",
+			"description": "Add your Str bonus to off-hand damage rolls"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 277,
+		"fields": {
+			"name": "Two-Weapon Rend",
+			"description": "Rend a foe hit by both your weapons"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 278,
+		"fields": {
+			"name": "Improved Two-Weapon Fighting",
+			"description": "Gain additional off-hand attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 279,
+		"fields": {
+			"name": "Greater Two-Weapon Fighting",
+			"description": "Gain a third off-hand attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 280,
+		"fields": {
+			"name": "Two-Weapon Defense",
+			"description": "Gain +1 shield bonus when fighting with two weapons"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 281,
+		"fields": {
+			"name": "Vermin Heart",
+			"description": "Target vermin with spells as if they were animals"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 282,
+		"fields": {
+			"name": "Vital Strike",
+			"description": "Deal twice the normal damage on a single attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 283,
+		"fields": {
+			"name": "Improved Vital Strike",
+			"description": "Deal three times the normal damage on a single attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 284,
+		"fields": {
+			"name": "Greater Vital Strike",
+			"description": "Deal four times the normal damage on a single attack"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 285,
+		"fields": {
+			"name": "War Singer",
+			"description": "Gain benefits to bardic performance on battlefields and against orcs"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 286,
+		"fields": {
+			"name": "Weapon Finesse",
+			"description": "Use Dex instead of Str on attack rolls with light weapons"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 287,
+		"fields": {
+			"name": "Weapon Focus",
+			"description": "+1 bonus on attack rolls with one weapon"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 288,
+		"fields": {
+			"name": "Dazzling Display",
+			"description": "Intimidate all foes within 30 feet"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 289,
+		"fields": {
+			"name": "Shatter Defenses",
+			"description": "Hindered foes are flat-footed"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 290,
+		"fields": {
+			"name": "Deadly Stroke",
+			"description": "Deal double damage plus 1 Con bleed"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 291,
+		"fields": {
+			"name": "Greater Weapon Focus",
+			"description": "+1 bonus on attack rolls with one weapon"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 292,
+		"fields": {
+			"name": "Penetrating Strike",
+			"description": "Your attacks ignore 5 points of damage reduction"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 293,
+		"fields": {
+			"name": "Greater Penetrating Strike",
+			"description": "Your attacks ignore 10 points of damage reduction"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 294,
+		"fields": {
+			"name": "Weapon Specialization",
+			"description": "+2 bonus on damage rolls with one weapon"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 295,
+		"fields": {
+			"name": "Point-Blank Master",
+			"description": "Do not provoke attacks of opportunity while firing one ranged weapon"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 296,
+		"fields": {
+			"name": "Greater Weapon Specialization",
+			"description": "+2 bonus on damage rolls with one weapon"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 297,
+		"fields": {
+			"name": "Well-Prepared",
+			"description": "Retrieve a specific mundane item from your person"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 299,
+		"fields": {
+			"name": "Brew Potion",
+			"description": "Create magic potions"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 300,
+		"fields": {
+			"name": "Craft Magic Arms and Armor",
+			"description": "Create magic armors, shields, and weapons"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 301,
+		"fields": {
+			"name": "Craft Rod",
+			"description": "Create magic rods"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 302,
+		"fields": {
+			"name": "Craft Staff",
+			"description": "Create magic staves"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 303,
+		"fields": {
+			"name": "Craft Wand",
+			"description": "Create magic wands"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 304,
+		"fields": {
+			"name": "Craft Wondrous Item",
+			"description": "Create magic wondrous items"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 305,
+		"fields": {
+			"name": "Forge Ring",
+			"description": "Create magic rings"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 306,
+		"fields": {
+			"name": "Scribe Scroll",
+			"description": "Create magic scrolls"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 308,
+		"fields": {
+			"name": "Bouncing Spell",
+			"description": "Redirect a spell that had no effect on initial target"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 309,
+		"fields": {
+			"name": "Dazing Spell",
+			"description": "Daze creature with spell damage"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 310,
+		"fields": {
+			"name": "Disruptive Spell",
+			"description": "Target of spell must make concentration check to cast a spell in the next round"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 311,
+		"fields": {
+			"name": "Ectoplasmic Spell",
+			"description": "Spell fully affects incorporeal and ethereal creatures"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 312,
+		"fields": {
+			"name": "Elemental Spell",
+			"description": "Inflict energy damage instead of regular spell damage"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 313,
+		"fields": {
+			"name": "Empower Spell",
+			"description": "Increase spell variables by 50%"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 314,
+		"fields": {
+			"name": "Enlarge Spell",
+			"description": "Double spell range"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 315,
+		"fields": {
+			"name": "Extend Spell",
+			"description": "Double spell duration"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 316,
+		"fields": {
+			"name": "Focused Spell",
+			"description": "Increase save DC of spell for one target in a group"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 317,
+		"fields": {
+			"name": "Heighten Spell",
+			"description": "Treat spell as a higher level"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 318,
+		"fields": {
+			"name": "Intensified Spell",
+			"description": "Increase maximum damage dice by 5 levels"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 319,
+		"fields": {
+			"name": "Lingering Spell",
+			"description": "Instantaneous area effect spell lasts for 1 round"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 320,
+		"fields": {
+			"name": "Maximize Spell",
+			"description": "Maximize spell variables"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 321,
+		"fields": {
+			"name": "Merciful Spell",
+			"description": "Spell inflicts nonlethal damage instead of lethal"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 322,
+		"fields": {
+			"name": "Persistent Spell",
+			"description": "Creatures who saved against a spell must save again"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 323,
+		"fields": {
+			"name": "Quicken Spell",
+			"description": "Cast spell as a swift action"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 324,
+		"fields": {
+			"name": "Reach Spell",
+			"description": "Increase spell range to higher range category"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 325,
+		"fields": {
+			"name": "Selective Spell",
+			"description": "Exclude targets from an area effect spell"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 326,
+		"fields": {
+			"name": "Sickening Spell",
+			"description": "Sicken creature with spell damage"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 327,
+		"fields": {
+			"name": "Silent Spell",
+			"description": "Cast spell without verbal components"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 328,
+		"fields": {
+			"name": "Still Spell",
+			"description": "Cast spell without somatic components"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 329,
+		"fields": {
+			"name": "Thundering Spell",
+			"description": "Deafen creature with spell damage"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 330,
+		"fields": {
+			"name": "Widen Spell",
+			"description": "Double spell area"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 332,
+		"fields": {
+			"name": "Allied Spellcaster",
+			"description": "+2 bonus on level checks to overcome spell resistance"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 333,
+		"fields": {
+			"name": "Coordinated Defense",
+			"description": "+2 bonus to CMD"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 334,
+		"fields": {
+			"name": "Coordinated Maneuvers",
+			"description": "+2 bonus on combat maneuver checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 335,
+		"fields": {
+			"name": "Duck and Cover",
+			"description": "Take ally\u2019s result on Reflex saving throw"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 336,
+		"fields": {
+			"name": "Lookout",
+			"description": "Act in surprise round if ally can act"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 337,
+		"fields": {
+			"name": "Outflank",
+			"description": "Gain +4 bonus on attack rolls when flanking"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 338,
+		"fields": {
+			"name": "Paired Opportunists",
+			"description": "+4 bonus on attacks of opportunity"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 339,
+		"fields": {
+			"name": "Precise Strike",
+			"description": "Deal +1d6 points of precision damage with melee attacks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 340,
+		"fields": {
+			"name": "Shield Wall",
+			"description": "Increase your shield bonus to AC"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 341,
+		"fields": {
+			"name": "Shielded Caster",
+			"description": "+4 bonus on concentration checks"
+		},
+		"model": "resources.feat"
+	},
+	{
+		"pk": 342,
+		"fields": {
+			"name": "Swap Places",
+			"description": "Switch places with an adjacent ally"
+		},
+		"model": "resources.feat"
+	}
+]

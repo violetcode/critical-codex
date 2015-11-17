@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+
+{% block title %}Login | {% endblock %}
+{% block page %}login{% endblock %}
+
+{% block content %}
+
+	<h3 class="form-signin-heading">Login</h3>
+
+	{% if form.errors %}
+	<p>Your username and password didn't match. Please try again.</p>
+	{% endif %}
+
+	<form method="post" action="{% url 'Core:login' %}">{% csrf_token %}
+		<div class="form-group">
+			<label for="id_username" class="sr-only">Username</label>
+			<input id="id_username" class="form-control" placeholder="Username" type="text" name="username" maxlength="255" />
+		</div>
+
+		<div class="form-group">
+			<label for="id_password" class="sr-only">Password</label>
+			<input id="id_password" class="form-control" placeholder="Password" type="password" name="password" />
+		</div>
+
+		<div class="pull-right">
+			<p><a href="{% url 'Core:password_reset' %}">Forgot</a> your password?</br>
+			<a href="{% url 'Core:register' %}">Need an account</a>?</p>
+		</div>
+		
+		<button type="submit" class="btn btn-default">Login</button>
+		<input type="hidden" name="next" value="{{ next }}" />
+	</form>
+{% endblock %}

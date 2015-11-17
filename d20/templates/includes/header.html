@@ -1,0 +1,89 @@
+{% load utils_tags %}
+<div class="navbar navbar-default navbar-fixed-top" id="top">
+	<div class="nav-gradient">
+	<div class="container">
+
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{% url 'Pages:Index' %}">{% include "includes/svg_logo.html" %}</a>
+		</div><!-- /.navbar-header -->
+
+
+		<div class="collapse navbar-collapse" role="navigation">
+
+			<form class="navbar-form navbar-left" role="search" action="/search" method="get">
+				<div class="form-group">
+					<input type="text" name="q" class="search-query form-control" placeholder="Search CriticalCodex">
+				</div>
+			</form>
+
+			<ul class="nav navbar-nav navbar-right">
+
+				{% if user.is_authenticated and not user.is_active %}
+				<li><a href="{% url 'Core:AccountReactivate' %}"><span class="label label-danger">Pending Deletion</span></a></li>
+				{% endif %}
+
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Explore</a>
+					<ul class="dropdown-menu">
+						<li><a href="{% url 'Charactersheet:Charactersheet-List' %}">Characters</a></li>
+						<li><a href="#">Campaigns</a></li>
+						<li class="divider"></li>
+						<li><a href="">Browse Tags</a></li>
+					</ul>
+				</li>
+				<li ng-controller="DiceController">
+					<a class="dice-tool-wrapper" href="#" ng-click="openPopup('dice', 'Dice Roller')">
+	                <svg
+	                xmlns="http://www.w3.org/2000/svg"
+	                xmlns:xlink="http://www.w3.org/1999/xlink"
+	                version="1.1"
+	                id="dice-tool"
+	                x="0px" y="0px"
+	                width="24px" height="24px"
+	                viewBox="5.0 -10.0 100.0 135.0"
+	                enable-background="new 0 0 100 100"
+	                xml:space="preserve">
+	                <path
+	                d="M77,14H23c-4.971,0-9,4.029-9,9v54c0,4.971,4.029,9,9,9h54c4.971,0,9-4.029,9-9V23C86,18.029,81.971,14,77,14z M32,77
+	                c-4.971,0-9-4.029-9-9s4.029-9,9-9s9,4.029,9,9S36.971,77,32,77z M32,41c-4.971,0-9-4.029-9-9s4.029-9,9-9s9,4.029,9,9
+	                S36.971,41,32,41z M68,77c-4.971,0-9-4.029-9-9s4.029-9,9-9s9,4.029,9,9S72.971,77,68,77z M68,41c-4.971,0-9-4.029-9-9s4.029-9,9-9
+	                s9,4.029,9,9S72.971,41,68,41z"
+	                />
+	                </svg>
+					</a>
+				</li>
+				{% if user.is_authenticated %}
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-plus"></i> New</a>
+					<ul class="dropdown-menu">
+						<li><a href="{% url 'Charactersheet:Charactersheet-New' %}">Character</a></li>
+					</ul>
+				</li>
+
+				<li class="dropdown">
+					<a href="{% url 'Core:AccountSettings' %}" class="dropdown-toggle" data-toggle="dropdown"> <img class="img-rounded" id="avatar" width="24" height="24" src="https://secure.gravatar.com/avatar/{{ user|email_hash }}?s=32&amp;d={{STATIC_URL}}img/gravatar_small.png"></a>
+					<ul class="dropdown-menu">
+						<li><a href="{% url 'Profile:Profile' user.username %}">My Profile</a></li>
+						<li><a href="">My Character Sheets</a></li>
+						<li><a href="">New character sheet</a></li>
+						<li class="divider"></li>
+						<li><a href="{% url 'Core:AccountSettings' %}">Settings</a></li>
+						<li><a href="{% url 'Core:logout' %}">Logout</a></li>
+					</ul>
+				</li>
+				{% else %}
+				<li><a href="{% url 'Core:login' %}">Login</a></li>
+				<li><a href="">Tour</a></li>
+				{% endif %}
+			</ul>
+
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container -->
+	</div><!-- /.nav-gradient -->
+</div><!-- /.navbar -->

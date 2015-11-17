@@ -1,0 +1,10 @@
+{% load i18n %}
+
+{% trans "Someone requested a CriticalCodex account recovery for this email address. If this was not you, please disregard this email." %}
+
+{% trans "If you made the request, please follow the link below to reset your password:" %}
+{{ protocol}}://{{ domain }}{% url 'Core:password_reset_confirm' uidb64=uid token=token %}
+
+{% trans "Your username, in case you've forgotten:" %} {{ user.get_username }}
+
+{% blocktrans %}- CriticalCodex{% endblocktrans %}

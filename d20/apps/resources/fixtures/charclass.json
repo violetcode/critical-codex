@@ -1,0 +1,722 @@
+[
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d12",
+    "alignment_req": "Any nonlawful.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Acrobatics (Dex), Climb (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), Knowledge (nature) (Int), Perception (Wis), Ride (Dex), Survival (Wis), and Swim (Str)",
+    "description": "The barbarian is a brutal berserker from beyond the edge of civilized lands.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Barbarian"
+  },
+  "pk": 1
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Acrobatics (Dex), Appraise (Int), Bluff (Cha), Climb (Str), Craft (Int), Diplomacy (Cha), Disguise (Cha), Escape Artist (Dex), Intimidate (Cha), Knowledge (all) (Int), Linguistics (Int), Perception (Wis), Perform (Cha), Profession (Wis), Sense Motive (Wis), Sleight of Hand (Dex), Spellcraft (Int), Stealth (Dex), and Use Magic Device (Cha)",
+    "description": "The bard uses skill and spell alike to bolster his allies, confound his enemies, and build upon his fame.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Bard"
+  },
+  "pk": 2
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "A cleric's alignment must be within one step of her deity's, along either the law/chaos axis or the good/evil axis.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Appraise (Int), Craft (Int), Diplomacy (Cha), Heal (Wis), Knowledge (arcana) (Int), Knowledge (history) (Int), Knowledge (nobility) (Int), Knowledge (planes) (Int), Knowledge (religion) (Int), Linguistics (Int), Profession (Wis), Sense Motive (Wis), and Spellcraft (Int)",
+    "description": "A devout follower of a deity, the cleric can heal wounds, raise the dead, and call down the wrath of the gods.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Cleric"
+  },
+  "pk": 3
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any neutral.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Climb (Str), Craft (Int), Fly (Dex), Handle Animal (Cha), Heal (Wis), Knowledge (geography) (Int), Knowledge (nature) (Int), Perception (Wis), Profession (Wis), Ride (Dex), Spellcraft (Int), Survival (Wis), and Swim (Str)",
+    "description": "The druid is a worshiper of all things natural\u2014a spellcaster, a friend to animals, and a skilled shapechanger.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Druid"
+  },
+  "pk": 4
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Climb (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), Knowledge (dungeoneering) (Int), Knowledge (engineering) (Int), Profession (Wis), Ride (Dex), Survival (Wis), and Swim (Str)",
+    "description": "Brave and stalwart, the fighter is a master of all manner of arms and armor.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Fighter"
+  },
+  "pk": 5
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any lawful.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Acrobatics (Dex), Climb (Str), Craft (Int), Escape Artist (Dex), Intimidate (Cha), Knowledge (history) (Int), Knowledge (religion) (Int), Perception (Wis), Perform (Cha), Profession (Wis), Ride (Dex), Sense Motive (Wis), Stealth (Dex), and Swim (Str)",
+    "description": "A student of martial arts, the monk trains his body to be his greatest weapon and defense.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Monk"
+  },
+  "pk": 6
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Lawful good.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Craft (Int), Diplomacy (Cha), Handle Animal (Cha), Heal (Wis), Knowledge (nobility) (Int), Knowledge (religion) (Int), Profession (Wis), Ride (Dex), Sense Motive (Wis), and Spellcraft (Int)",
+    "description": "The paladin is the knight in shining armor, a devoted follower of law and good.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Paladin"
+  },
+  "pk": 7
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Climb (Str), Craft (Int), Handle Animal (Cha), Heal (Wis), Intimidate (Cha), Knowledge (dungeoneering) (Int), Knowledge (geography) (Int), Knowledge (nature) (Int), Perception (Wis), Profession (Wis), Ride (Dex), Spellcraft (Int), Stealth (Dex), Survival (Wis), and Swim (Str)",
+    "description": "A tracker and hunter, the ranger is a creature of the wild and of tracking down his favored foes.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Ranger"
+  },
+  "pk": 8
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Acrobatics (Dex), Appraise (Int), Bluff (Cha), Climb (Str), Craft (Int), Diplomacy (Cha), Disable Device (Dex), Disguise (Cha), Escape Artist (Dex), Intimidate (Cha), Knowledge (dungeoneering) (Int), Knowledge (local) (Int), Linguistics (Int), Perception (Wis), Perform (Cha), Profession (Wis), Sense Motive (Wis), Sleight of Hand (Dex), Stealth (Dex), Swim (Str), and Use Magic Device (Cha)",
+    "description": "The rogue is a thief and a scout, an opportunist capable of delivering brutal strikes against unwary foes.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Rogue"
+  },
+  "pk": 9
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d6",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Appraise (Int), Bluff (Cha), Craft (Int), Fly (Dex), Intimidate (Cha), Knowledge (arcana) (Int), Profession (Wis), Spellcraft (Int), and Use Magic Device (Cha)",
+    "description": "The spellcasting sorcerer is born with an innate knack for magic and has strange, eldritch powers.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Sorcerer"
+  },
+  "pk": 10
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d6",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Appraise (Int), Craft (Int), Fly (Dex), Knowledge (all) (Int), Linguistics (Int), Profession (Wis), and Spellcraft (Int)",
+    "description": "The wizard masters magic through constant study that gives him incredible magical power.",
+    "wealth": "",
+    "class_type": "Core",
+    "name": "Wizard"
+  },
+  "pk": 11
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Arcane archers can be of any alignment. Elf or half-elf arcane arches tend to be free-spirited and are rarely lawful. Similarly, it is uncommon for elven arcane archers to be evil, and overall the path of the arcane archer is more often pursued by good or neutral characters.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Perception (Wis), Ride (Dex), Stealth (Dex), and Survival (Wis)",
+    "description": "An arcane spellcaster who draws upon ancient elven traditions to infuse his arrows with potent magical power.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Arcane Archer"
+  },
+  "pk": 12
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d6",
+    "alignment_req": "All arcane tricksters have a penchant for mischief and thievery, and are therefore never lawful. Although they sometimes acquire their magical abilities through the studious path of wizardry, their magical aptitude more often stems from a sorcerous bloodline. As such, many arcane tricksters are of a chaotic alignment.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Acrobatics (Dex), Appraise (Int), Bluff (Cha), Climb (Str), Diplomacy (Cha), Disable Device (Int), Disguise (Cha), Escape Artist (Dex), Knowledge (all skills taken individually) (Int), Perception (Wis), Sense Motive (Wis), Sleight of Hand (Dex), Spellcraft (Int), Stealth (Dex), and Swim (Str)",
+    "description": "A troublemaker and a scoundrel who uses arcane magic to enhance her thievery and trickery.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Arcane Trickster"
+  },
+  "pk": 13
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Due to its necessary selfishness and callous indifference toward taking lives, the assassin class attracts those with evil alignments more than any others. Because the profession requires a degree of self-discipline, chaotic characters are ill suited to becoming these shadowy killers. Neutral characters sometimes become assassins, frequently thinking of themselves as simple professionals performing a job, yet the nature of their duties inevitably pushes them toward an evil alignment.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Acrobatics (Dex), Bluff (Cha), Climb (Str), Diplomacy (Cha), Disable Device (Int), Disguise (Cha), Escape Artist (Dex), Intimidate (Cha), Linguistics (Int), Perception (Wis), Sense Motive (Wis), Sleight of Hand (Dex), Stealth (Dex), Swim (Str), and Use Magic Device (Cha)",
+    "description": "A remorseless murderer who kills for money and the sheer thrill of death-dealing.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Assassin"
+  },
+  "pk": 14
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d12",
+    "alignment_req": "Dragon disciples can be of any alignment, although they tend to be more chaotic than lawful. Those dragon disciples that assume the traits of chromatic dragons, such as bestial white and fearsome red dragons, have a proclivity for evil. Conversely, those that take after the metallic dragons, such as stoic brass and chivalric gold dragons, are often of good alignments.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Diplomacy (Cha), Escape Artist (Dex), Fly (Dex), Knowledge (all skills taken individually) (Int), Perception (Wis), and Spellcraft (Int)",
+    "description": "An arcane spellcaster who has embraced his latent draconic heritage and, over the course of training and devotion, undergoes a partial transformation into a dragon.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Dragon Disciple"
+  },
+  "pk": 15
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Duelists can be of any alignment, although since most hail from backgrounds as rogues or bards, they tend to eschew lawful behavior. Lawful duelists are not unheard of, however, and such duelists often adhere to a strict code of honor, refusing to attack unarmed or obviously inferior opponents.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Acrobatics (Dex), Bluff (Cha), Escape Artist (Dex), Perception (Wis), Perform (Cha), and Sense Motive (Wis)",
+    "description": "A swashbuckling swordfighter who relies upon grace, poise, and acrobatics to win the day.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Duelist"
+  },
+  "pk": 16
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "The road to becoming an eldritch knight is as varied as the paths leading to apprenticeship under a wizard or a career as a soldier, and eldritch knights can therefore be of any alignment. Maintaining a balance between studies of arcane lore and martial techniques requires great discipline, however, and for that reason many favor lawful alignments.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Climb (Str), Knowledge (arcana) (Int), Knowledge (nobility) (Int), Linguistics (Int), Ride (Dex), Sense Motive (Wis), Spellcraft (Int), and Swim (Str)",
+    "description": "An arcane spellcaster who augments his magical skills with combat to create a deadly combination of weapons and magic.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Eldritch Knight"
+  },
+  "pk": 17
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d6",
+    "alignment_req": "Most loremasters cannot be bothered with distracting and pointless philosophies such as ethics, and so tend to be neutral, neutral good, or neutral evil.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Appraise (Int), Diplomacy (Cha), Handle Animals (Cha), Heal (Wis), Knowledge (all skills taken individually) (Int), Linguistics (Int), Perform (Cha), Spellcraft (Int), and Use Magic Device (Cha)",
+    "description": "A spellcaster who devotes his life to research and rumination upon the mysteries of the world.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Loremaster"
+  },
+  "pk": 18
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d6",
+    "alignment_req": "The motivations of a mystic theurge rarely stem from a sense of altruism or philanthropy, so most tend to be neutral, neutral good, or neutral evil. Lawful mystic theurges, whether good, neutral, or evil, are rarer, and often use their powers for either the benefit\u2014or control\u2014of society. Chaotic mystic theurges are rarer still, as the calling generally requires great personal discipline.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": " Knowledge (arcana) (Int), Knowledge (religion) (Int), Sense Motive (Wis), and Spellcraft (Int)",
+    "description": "Equally devoted to divine and arcane magic, the mystic theurge combines both magical traditions into one incredibly diverse class.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Mystic Theurge"
+  },
+  "pk": 19
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "A Pathfinder chronicler's alignment largely determines her motivations. Good characters tend to view their missions as noble ventures, neutral characters seek to preserve knowledge for knowledge's sake, and evil characters are driven by an urge to accumulate wealth and add to their own glory.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Appraise (Int), Bluff (Cha), Diplomacy (Cha), Disguise (Cha), Escape Artist (Dex), Intimidate (Cha), Knowledge (all skills, taken individually) (Int), Linguistics (Int), Perception (Wis), Perform (Cha), Ride (Dex), Sense Motive (Wis), Sleight of Hand (Dex), Survival (Wis), and Use Magic Device (Cha)",
+    "description": "An explorer at heart, the Pathfinder chronicler travels to distant, exotic lands to expand her knowledge of the world.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Pathfinder Chronicler"
+  },
+  "pk": 20
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Because of their nature as visually duplicitous tricksters, shadowdancers do not fit comfortably into the lawful category, as many use their talents to avoid the eyes of legitimate authority. Yet though they are allies of darkness, shadowdancers are neither inherently evil nor predisposed to good. To them, the darkness is simply the darkness, without any of the usual moral connotations made by the unenlightened.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Acrobatics (Dex), Bluff (Cha), Diplomacy (Cha), Disguise (Cha), Escape Artist (Dex), Perception (Wis), Perform (Cha), Sleight of Hand (Dex), and Stealth (Dex)",
+    "description": "A mysterious adventurer who walks the boundaries between the real world and the realm of shadows, and who can command shadows to do her bidding.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Shadowdancer"
+  },
+  "pk": 21
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d6",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "Blending the power of the sorcerer with the versatility of the wizard, the arcanist draws upon a reservoir of power to bend magic to her will.",
+    "wealth": "2d6 \u00d7 10 gp (average 70 gp).",
+    "class_type": "Advanced",
+    "name": "Arcanist"
+  },
+  "pk": 22
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "Fusing the frenzy of the barbarian with the bloodline might of the sorcerer, the bloodrager calls upon innate power to give himself extraordinary abilities.",
+    "wealth": "3d6 \u00d7 10 gp (average 105 gp)",
+    "class_type": "Advanced",
+    "name": "Bloodrager"
+  },
+  "pk": 23
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "Focusing on hand-to-hand combat, the brawler mixes the martial artistry of the monk with the specialist training of the fighter.",
+    "wealth": "3d6 \u00d7 10 gp (average 105 gp)",
+    "class_type": "Advanced",
+    "name": "Brawler"
+  },
+  "pk": 24
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any neutral.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "Though both the druid and ranger can have animal companions, the hunter takes this bond to the next level, forming a deadly duo with her savage ally.",
+    "wealth": "4d6 \u00d7 10 gp (average 140 gp)",
+    "class_type": "Advanced",
+    "name": "Hunter"
+  },
+  "pk": 25
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "With the rogue's cunning complemented by the alchemist's magical talent, the investigator is a peerless problem solver.",
+    "wealth": "3d6 \u00d7 10 gp (average 105 gp)",
+    "class_type": "Advanced",
+    "name": "Investigator"
+  },
+  "pk": 26
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "Calling on the divine power of the oracle and the hexes of a witch, the shaman communes with her spirit animal to unleash doom upon her foes.",
+    "wealth": "3d6 \u00d7 10 gp (average 105 gp).",
+    "class_type": "Advanced",
+    "name": "Shaman"
+  },
+  "pk": 27
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "Sharing fury through song and deed, the skald takes the rage that lives in the heart of the barbarian and inspires it in others using the performances of the bard.",
+    "wealth": "3d6 \u00d7 10 gp (average 105 gp)",
+    "class_type": "Advanced",
+    "name": "Skald"
+  },
+  "pk": 28
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "Mixing the precise strikes of the rogue with the special training of the ranger, the slayer hunts down his foes with ruthless efficiency.",
+    "wealth": "5d6 \u00d7 10 gp (average 175 gp)",
+    "class_type": "Advanced",
+    "name": "Slayer"
+  },
+  "pk": 29
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "Combining the prowess of the fighter with the determination of the gunslinger, the swashbuckler is an acrobatic melee combatant.",
+    "wealth": "5d6 \u00d7 10 gp (average 175 gp)",
+    "class_type": "Advanced",
+    "name": "Swashbuckler"
+  },
+  "pk": 30
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "A warpriest's alignment must be within one step of his deity's, along either the law/chaos axis or the good/evil axis.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "",
+    "description": "Blending the cleric's divine might and the fighter's martial skills, the warpriest brings the fight to the enemies of his faith.",
+    "wealth": "5d6 \u00d7 10 gp (average 175 gp)",
+    "class_type": "Advanced",
+    "name": "Warpriest"
+  },
+  "pk": 31
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Appraise (Int), Craft (any) (Int), Disable Device (Dex), Fly (Dex), Heal (Wis), Knowledge (arcana) (Int), Knowledge (nature) (Int), Perception (Wis), Profession (Wis), Sleight of Hand (Dex), Spellcraft (Int), Survival (Wis), Use Magic Device (Cha)",
+    "description": "The alchemist is the master of alchemy, using extracts to grant him great power, mutagens to enhance his form, and bombs to destroy his enemies.",
+    "wealth": "3d6 \u00d7 10 gp (average 105 gp)",
+    "class_type": "Advanced",
+    "name": "Alchemist"
+  },
+  "pk": 32
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Bluff (Cha), Climb (Str), Craft (Int), Diplomacy (Cha), Handle Animal (Cha), Intimidate (Cha), Profession (Wis), Ride (Dex), Sense Motive (Wis), and Swim (Str)",
+    "description": "Mounted upon his mighty steed, the cavalier is a brave warrior, using his wit, charm, and strength at arms to rally his companions and achieve his goals.",
+    "wealth": "5d6 \u00d7 10 gp (average 175 gp)",
+    "class_type": "Advanced",
+    "name": "Cavalier"
+  },
+  "pk": 33
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "An inquisitor's alignment must be within one step of her deity's, along either the law/chaos axis or the good/evil axis.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Bluff (Cha), Climb (Str), Craft (Int), Diplomacy (Cha), Disguise (Cha), Heal (Wis), Intimidate (Cha), Knowledge (arcana) (Int), Knowledge (dungeoneering) (Int), Knowledge (nature) (Int), Knowledge (planes) (Int), Knowledge (religion) (Int), Perception (Wis), Profession (Wis), Ride (Dex), Sense Motive (Wis), Spellcraft (Int), Stealth (Dex), Survival (Wis), and Swim (Str)",
+    "description": "Scourge of the unfaithful and hunter of horrors, the inquisitor roots out the enemies of her faith with grim conviction and an array of divine blessings.",
+    "wealth": "4d6 \u00d7 10 gp (average 140 gp)",
+    "class_type": "Advanced",
+    "name": "Inquisitor"
+  },
+  "pk": 34
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Craft (Int), Diplomacy (Cha), Heal (Wis), Knowledge (history) (Int), Knowledge (planes) (Int), Knowledge (religion) (Int), Profession (Wis), Sense Motive (Wis), and Spellcraft (Int). In addition, oracles receive additional class skills depending upon their oracle mystery.",
+    "description": "Drawing upon divine mysteries, the oracle channels divine power through her body and soul, but at a terrible price.",
+    "wealth": "3d6 \u00d7 10 gp (average 105 gp)",
+    "class_type": "Advanced",
+    "name": "Oracle"
+  },
+  "pk": 35
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Craft (Int), Fly (Dex), Handle Animal (Cha), Knowledge (all) (Int), Linguistics (Int), Profession (Wis), Ride (Dex), Spellcraft (Int), and Use Magic Device (Cha)",
+    "description": "Bonded to a mysterious creature called an eidolon, the summoner focuses his power on strengthing that connection and enhancing his strange, otherworldy companion.",
+    "wealth": "2d6 \u00d7 10 gp (average 70 gp)",
+    "class_type": "Advanced",
+    "name": "Summoner"
+  },
+  "pk": 36
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d6",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Craft (Int), Fly (Dex), Heal (Wis), Intimidate (Cha), Knowledge (arcana) (Int), Knowledge (history) (Int), Knowledge (nature) (Int), Knowledge (planes) (Int), Profession (Wis), Spellcraft (Int), and Use Magic Device (Cha)",
+    "description": "Lurking on the fringe of civilization, the witch makes a powerful connection with a patron that grants her strange and mysterious powers through a special familiar.",
+    "wealth": "3d6 \u00d7 10 gp (average 105 gp)",
+    "class_type": "Advanced",
+    "name": "Witch"
+  },
+  "pk": 37
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Bluff (Cha), Craft (Int), Diplomacy (Cha), Handle Animal (Cha), Heal (Wis), Intimidate (Cha), Knowledge (engineering) (Int), Knowledge (history) (Int), Knowledge (local) (Int), Knowledge (nobility) (Int), Perception (Wis), Profession (Wis), Ride (Dex), and Sense Motive (Wis)",
+    "description": "A veteran whose masterful tactics and air of command inspire allies to greater feats of heroism.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Battle Herald"
+  },
+  "pk": 38
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "While lawful vindicators are somewhat more common, vindicators may be of any alignment.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Climb (Str), Heal (Wis), Intimidate (Cha), Knowledge (planes) (Int), Knowledge (religion) (Int), Ride (Dex), Sense Motive (Wis), Spellcraft (Int), and Swim (Str)",
+    "description": "A pious warrior who spreads religion at the edge of a sword.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Holy Vindicator"
+  },
+  "pk": 39
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Any.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Climb (Str), Diplomacy (Cha), Handle Animal (Cha), Knowledge (geography) (Int), Knowledge (nature) (Int), Knowledge (the planes) (Int), Linguistics (Int), Perception (Wis), Stealth (Dex), Survival (Wis), and Swim (Str)",
+    "description": "A scout and wanderer comfortable in even the strangest terrain.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Horizon Walker"
+  },
+  "pk": 40
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "A master chymist actually has two alignments (see the mutagenic form ability). The only restriction on these alignments is that they cannot be exactly the same.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Acrobatics (Dex), Climb (Str), Escape Artist (Dex), Intimidate (Cha), Knowledge (dungeoneering) (Int), Sense Motive (Wis), Stealth (Dex), and Swim (Str)",
+    "description": "An alchemist whose mutagens create an alternate, brutish personality.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Master Chymist"
+  },
+  "pk": 41
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "The practice of espionage demands discipline and a certain amount of moral and ethical flexibility; more master spies are neutral than lawful or chaotic.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Bluff (Cha), Diplomacy (Cha), Disable Device (Dex), Disguise (Cha), Escape Artist (Dex), Knowledge (all) (Int), Linguistics (Int), Perception (Wis), Sense Motive (Wis), Sleight of Hand (Dex), Stealth (Dex), and Use Magic Device (Cha)",
+    "description": "An espionage expert specializing in disguises and striking swiftly from the shadows.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Master Spy"
+  },
+  "pk": 42
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d8",
+    "alignment_req": "Nature wardens tend toward nonevil alignments, as many pursue their profession out of a desire to help and protect others. Occasionally evil wardens can be found turning the bitter realities of the wild upon their enemies or guarding natural sites tainted by dark fey.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Climb (Str), Handle Animal (Cha), Heal (Wis), Knowledge (geography) (Int), Knowledge (nature) (Int), Perception (Wis), Ride (Dex), Sense Motive (Wis), Survival (Wis), and Swim (Str)",
+    "description": "A master of the wilderness bonded spiritually to a fearsome animal companion.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Nature Warden"
+  },
+  "pk": 43
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d10",
+    "alignment_req": "Rage prophets may be of any nonlawful alignment, but chaotic alignments are more common, as they are in the barbarian tribes from which they hail. Wandering rage prophets are usually chaotic, living apart from any tribe and the tribal structure of their heritage as they take up the adventuring life.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "Climb (Str), Heal (Wis), Intimidate (Cha), Knowledge (history) (Int), Knowledge (religion) (Int), Sense Motive (Wis), Spellcraft (Int), and Swim (Str)",
+    "description": "A bold and barbaric champion who embraces otherworldly powers in order to perfect the art of combat.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Rage Prophet"
+  },
+  "pk": 44
+},
+{
+  "model": "resources.charclass",
+  "fields": {
+    "hit_die": "d12",
+    "alignment_req": "Anyone can be as stubborn as a rock and dedicated to holding one point no matter the cost, so stalwart defenders can be of any alignment. The dedication and practice required to learn the talents of a stalwart defender come more easily to characters with a strong respect for order and organization, however, so lawful stalwart defenders are much more common than chaotic ones.",
+    "player": [
+      "criticalcodex"
+    ],
+    "skills": "(Dex), Climb (Str), Intimidate (Cha), Perception (Wis), and Sense Motive (Wis)",
+    "description": "A master of defending territory and holding the line at all costs.",
+    "wealth": "",
+    "class_type": "Prestige",
+    "name": "Stalwart Defender"
+  },
+  "pk": 45
+}
+]

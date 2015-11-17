@@ -1,0 +1,74 @@
+{% extends "base.html" %}{% load utils_tags %}
+{% block page %}page profile {{ user_obj.username }}{% endblock %}
+
+{% block content-wrapper %}
+{% include "includes/header.html" %}
+<section id="content">
+    {% if user_obj.image %}
+    <div class="profile-lead" style="background-image: url({{user_obj.image.url}})">
+    {% else %}
+    <div class="profile-lead profile-blank-lead">
+    {% endif %}
+    <div class="profile-inner">
+        <nav class="profile-nav sub-nav">
+            <div class="container">
+                <div clas="row">
+                    <div class="col-md-3">
+                        <section class="profile-avatar">
+                            <div class="avatar">
+                            {% if user_obj == user %}<a href="http://gravatar.com/emails/">{% endif %}
+                            <img class="img-rounded" id="avatar" width="200" height="200"
+                            src="https://secure.gravatar.com/avatar/{{ user_obj|email_hash }}?s=250&amp;d={{STATIC_URL}}img/gravatar.png">
+                            {% if user_obj == user %}</a>{% endif %}
+                            </div>
+                        </section>
+                    </div><!-- /col-md-3 -->
+                    <div class="col-md-9">
+                        <ul class="list-inline">
+                            <li><a href="{% url 'Profile:Profile' user_obj.username %}">Profile</a></li>
+                            <li><a href="#"><span class="item-counts">{{user_obj.character_count}}</span> Characters</a></li>
+                        </ul>
+                    </div><!-- /col-md-9 -->
+                </div>
+            </div><!-- /container -->
+        </nav>
+    </div>
+    </div><!-- /profile-lead -->
+
+    <div class="content-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="profile-details">
+                        <div class="profile-title">
+                            {% if user_obj.is_premium %}<div class="pull-right"><span class="label label-primary">Premium User</span></div>{% endif %}
+                            <h2>{{ user_obj.username }}</h2>
+                            {% if user_obj.first_name or user_obj.last_name  %}<h4>{{ user_obj.first_name }} {{ user_obj.last_name }}</h4>{% endif %}
+                        </div>
+
+                        {% if user_obj.about %}
+                        <div class="profile-bio">
+                            <p>{{ user_obj.about }}</p>
+                        </div>
+                        {% endif %}
+
+                        <div class="profile-info">
+                            {% if user_obj.location %}<p><i class="fa fa-map-marker"></i> {{ user_obj.location }}</p>{% endif %}
+                            {% if user_obj.url %}<p><i class="fa fa-link"></i> {{ user_obj.url }}</p>{% endif %}
+                            <p><i class="fa fa-clock-o"></i> Joined {{ user_obj.date_joined|date:"F Y" }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    {% block content %}{% endblock %}
+
+                </div>
+                <div class="col-md-3">
+                    {% block content-sidebar %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "includes/footer.html" %}
+{% endblock %}

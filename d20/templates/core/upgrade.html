@@ -1,0 +1,35 @@
+{% extends "pages/base.html" %}
+
+{% block page %}page{% endblock %}
+{% block extra %}{% endblock %}
+
+{% block content-heading %}
+{% endblock %}
+
+{% block content %}
+<div class="well well-codex">
+	{% block content-inner %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block content-sidebar %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Super-Mega Premium Account</h3>
+	</div>
+	<ul class="list-group">
+		<li class="list-group-item">
+			<dt>Unlimited.</dt>
+			<dd>Free accounts are limited to creatine a certain number of characters, items, and encounters. As a premium user, create and share as much as you want!</dd>
+		</li>
+		<li class="list-group-item">
+			<dt>No ads.</dt>
+			<dd>Okay, you could just use adblock. But this way you can show your support.</dd>
+		</li>
+		<li class="list-group-item">
+			<dt>Additional features</dt>
+			<dd>As the site grows closer to a 1.0 release, new features are constantly being added and improved. Premium members have access to test out these new features before normal users.</dd>
+		</li>
+	</ul>
+</div>
+{% endblock %}

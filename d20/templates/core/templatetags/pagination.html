@@ -1,0 +1,33 @@
+<ul class="pagination">
+    {% if page.has_previous %}
+    <li><a href="?{% if query %}q={{ query }}&amp;{% endif %}page={{ page.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+    <li class="disabled"><a href="#">&laquo;</a></li>
+    {% endif %}
+
+    {% for pnum in begin %}
+    <li><a href="?{% if query %}q={{ query }}&amp;{% endif %}page={{ pnum }}"{% if page.number == pnum %} class="active"{% endif %}>{{ pnum }}</a></li>
+    {% endfor %}
+
+    {% if middle %}
+        <li class="disabled"><a href="#">...</a></li>
+
+        {% for pnum in middle %}
+        <li><a href="?{% if query %}q={{ query }}&amp;{% endif %}page={{ pnum }}"{% if page.number == pnum %} class="active"{% endif %}>{{ pnum }}</a></li>
+        {% endfor %}
+    {% endif %}
+
+    {% if end %}
+        <li class="disabled"><a href="#">...</a></li>
+
+        {% for pnum in end %}
+            <li><a href="?{% if query %}q={{ query }}&amp;{% endif %}page={{ pnum }}"{% if page.number == pnum %} class="active"{% endif %}>{{ pnum }}</a></li>
+        {% endfor %}
+    {% endif %}
+
+    {% if page.has_next %}
+    <li><a href="?{% if query %}q={{ query }}&amp;{% endif %}page={{ page.next_page_number }}">&raquo;</a></li>
+    {% else %}
+    <li class="disabled"><a href="#">&raquo;</a></li>
+    {% endif %}
+</ul>

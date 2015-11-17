@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Settings</h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item"><a href="{% url 'Core:AccountSettings' %}">Account</a></li>
+        <li class="list-group-item"><a href="{% url 'Core:password_change' %}">Password</a></li>
+        <li class="list-group-item"><a href="{% url 'Core:ProfileSettings' %}">Profile</a></li>
+        {% if user.is_premium %}<li class="list-group-item"><a href="{% url 'Core:PremiumSettings' %}">Premium Settings</a></li>{% endif %}
+    </ul>
+</div>

@@ -1,0 +1,69 @@
+{% extends "base.html" %}{% load charsheet_tags %}
+
+{% block page %}index page{% endblock %}
+
+{% block content-wrapper %}
+    {% include "includes/header.html" %}
+
+    <section id="content">
+        <header class="site-head">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8"><h2>Home</h2></div>
+                </div>
+            </div>
+        </header>
+        <div class="content-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        {% include "profile/includes/card.html" %}
+                        {% include "core/includes/account_nav.html" %}
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">My Characters</h3>
+                            </div>
+                            {% render_all_characters user 25 %}
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Parties</h3>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Coming soon.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Campaigns</h3>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Coming soon.</li>
+                            </ul>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Encounters</h3>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Coming soon.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include "includes/footer.html" %}
+{% endblock %}
